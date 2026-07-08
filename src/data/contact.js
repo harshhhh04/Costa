@@ -1,53 +1,56 @@
+/* ─────────────────────────────────────────────
+   Sir Dough image URLs (direct from JD MagicBox)
+   ───────────────────────────────────────────── */
+export const SIRDOUGH_IMAGES = {
+  heroImg:     'https://content.jdmagicbox.com/v2/comp/chandigarh/m2/0172px172.x172.240213162311.s8m2/catalogue/sir-dough-bake-house-cafe-chandigarh-coffee-shops-CcWyvGKN2k.jpg',
+  warmInterior:'https://content3.jdmagicbox.com/v2/comp/chandigarh/m2/0172px172.x172.240213162311.s8m2/catalogue/sir-dough-bake-house-cafe-chandigarh-coffee-shops-ibHDvvZpCV.jpg',
+  spaciousLayout:'https://content.jdmagicbox.com/v2/comp/panchkula/p8/0172px172.x172.240523020341.q3p8/catalogue/sir-dough-bakehouse-cafe-panchkula-sector-5-panchkula-coffee-shops-mxo9djej80.jpg',
+  outdoorSeating:'https://content3.jdmagicbox.com/v2/comp/chandigarh/m2/0172px172.x172.240213162311.s8m2/catalogue/sir-dough-bake-house-cafe-chandigarh-coffee-shops-UtTZW2KEc2.jpg',
+}
+
 export const CONTACT_HEADER = {
-  label: 'Visit Us',
-  heading: 'Your usual table is waiting.',
+  label: 'Reserve',
+  heading: 'Tomorrow\'s loaf, reserved today.',
   subheading:
-    'Drop in for coffee, stay for the atmosphere.',
+    'We bake in small batches. Reserve by 9 PM tonight to secure yours for tomorrow morning.',
 }
 
 export const CONTACT_DETAILS = {
-  address: 'SCO 459-460, 35C, Sector 35, Chandigarh, 160022',
+  address: 'SCO 459-460, Sector 35C, Chandigarh — 160022',
+  addressShort: 'Sector 35C, Chandigarh',
+  /* ⚠️  Replace with Sir Dough's actual WhatsApp number */
+  whatsappNumber: '91XXXXXXXXXX',
   phone: null,
   phoneHref: null,
-  website: 'https://www.costacoffee.in/',
+  instagram: 'https://www.instagram.com/',
+  facebook: 'https://www.facebook.com/',
   hours: [
-    { day: 'Monday - Sunday', time: '7:30 AM - 11:00 PM' },
+    { day: 'Tuesday – Sunday', time: '7:00 AM – 2:00 PM' },
+    { day: 'Monday', time: 'Closed' },
   ],
-  mapQuery: 'Costa Coffee Sector 35C Chandigarh SCO 459-460',
+  mapQuery: 'Sir Dough Bake House Sector 35C Chandigarh',
 }
 
 export const FOOTER_NAV = [
-  { label: 'Home', href: '#home' },
-  { label: 'Menu', href: '#menu' },
-  { label: 'About', href: '#about' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Community', href: '#community' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home',        href: '#home'       },
+  { label: 'The Process', href: '#process'    },
+  { label: 'Menu',        href: '#menu'       },
+  { label: 'Gallery',     href: '#gallery'    },
+  { label: 'Community',   href: '#community'  },
+  { label: 'Reserve',     href: '#preorder'   },
 ]
 
 export const FOOTER_SOCIAL = [
-  {
-    label: 'Instagram',
-    platform: 'instagram',
-    href: 'https://www.instagram.com/',
-  },
-  {
-    label: 'Facebook',
-    platform: 'facebook',
-    href: 'https://www.facebook.com/',
-  },
-  {
-    label: 'X',
-    platform: 'x',
-    href: 'https://x.com/',
-  },
+  { label: 'Instagram', platform: 'instagram', href: 'https://www.instagram.com/' },
+  { label: 'Facebook',  platform: 'facebook',  href: 'https://www.facebook.com/'  },
 ]
 
 export const FOOTER_OPENING_HOURS = [
-  { day: 'Monday - Sunday', time: '7:30 AM - 11:00 PM' },
+  { day: 'Tue – Sun', time: '7:00 AM – 2:00 PM' },
+  { day: 'Monday',    time: 'Closed'              },
 ]
 
 export const FOOTER_COPY = {
-  copyright: '© 2026 Costa Coffee Sector 35C, Chandigarh.',
-  tagline: 'A local coffee space for work, study, and conversation.',
+  copyright: '© 2026 Sir Dough, Chandigarh.',
+  tagline: 'Time. Flour. Water. Patience.',
 }

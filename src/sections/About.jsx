@@ -33,7 +33,7 @@ function About({
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-20 xl:gap-28">
           {/* Image */}
           <div className="relative lg:pr-4">
-            <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[3/4]">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[4px] sm:aspect-[3/4]">
               <img
                 src={image}
                 alt={imageAlt}
@@ -48,15 +48,11 @@ function About({
 
           {/* Content */}
           <div className="lg:pl-2 lg:py-6">
-            <p className="text-label mb-7 sm:mb-8">{label}</p>
+            <p className="text-label mb-7 sm:mb-8">The Space</p>
 
             <h2 className="heading-section max-w-md">
-              {heading.split('\n').map((line, i) => (
-                <span key={line}>
-                  {i > 0 && <br />}
-                  {line}
-                </span>
-              ))}
+              Cozy, not rustic. <br />
+              Warm, <span className="italic text-costa-caramel font-light">not loud.</span>
             </h2>
 
             <p className="text-body mt-10 max-w-[26rem] text-costa-cream/70 sm:mt-12">{paragraph}</p>

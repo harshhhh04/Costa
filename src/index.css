@@ -1,15 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Outfit:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Outfit", system-ui, sans-serif;
-  --color-costa-espresso: #2a160f;
-  --color-costa-espresso-deep: #0f0705;
-  --color-costa-mahogany: #140a08;
-  --color-costa-walnut: #1b0e0a;
-  --color-costa-caramel: #c8945b;
-  --color-costa-cream: #f3efe6;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+
+  /* ── Sir Dough Bakery Palette ── */
+  --color-dough-chalk:    #FAF7F2; /* lightest — near white             */
+  --color-dough-canvas:   #F5F0E8; /* warm off-white — primary bg       */
+  --color-dough-linen:    #EDE7D9; /* linen — alternate section bg      */
+  --color-dough-warm:     #F0E6D3; /* mid warm tone                     */
+  --color-dough-oak:      #8B6914; /* amber / oak                       */
+  --color-dough-crust:    #5C3D1E; /* burnt crust / walnut              */
+  --color-dough-espresso: #2C1A0E; /* deepest dark — text, footer       */
+  --color-dough-charcoal: #3A3228; /* warm charcoal — body text         */
+  --color-dough-terra:    #C1622B; /* terracotta accent                 */
+
   --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -19,7 +25,7 @@
   }
 
   body {
-    @apply bg-costa-espresso-deep font-sans antialiased text-costa-cream;
+    @apply bg-dough-canvas font-sans antialiased text-dough-charcoal;
   }
 }
 
@@ -35,106 +41,105 @@
 
   /* ── Navbar ── */
   .navbar-shell {
-    @apply border-b border-costa-cream/[0.05] bg-costa-espresso-deep;
+    @apply border-b border-transparent bg-transparent;
   }
 
   .navbar-shell-scrolled {
-    @apply border-b border-costa-cream/[0.05] bg-costa-espresso-deep/90 backdrop-blur-md shadow-[0_10px_40px_rgba(0,0,0,0.55)];
+    @apply border-b border-dough-linen bg-dough-chalk/95 backdrop-blur-md shadow-[0_4px_24px_rgba(44,26,14,0.06)];
   }
 
   /* ── Typography ── */
   .text-label {
-    @apply text-[9px] font-light uppercase tracking-[0.32em] text-costa-cream/35 sm:text-[10px];
+    @apply text-[9px] font-light uppercase tracking-[0.32em] text-dough-charcoal/40 sm:text-[10px];
+  }
+
+  .text-label-light {
+    @apply text-[9px] font-light uppercase tracking-[0.32em] text-dough-chalk/40 sm:text-[10px];
   }
 
   .heading-hero {
-    @apply mx-auto max-w-[18rem] font-serif text-[1.875rem] font-light leading-[1.2] tracking-[0.01em] text-costa-cream sm:max-w-xs sm:text-4xl md:max-w-sm md:text-[2.65rem] lg:text-[3.1rem];
+    @apply font-serif text-[2.4rem] font-normal leading-[1.08] tracking-[-0.01em] text-dough-chalk sm:text-5xl md:text-[3.5rem] lg:text-[4.25rem];
   }
 
   .heading-section {
-    @apply font-serif text-4xl font-light leading-[1.14] tracking-wide text-costa-cream sm:text-[2.65rem] lg:text-[3.25rem];
+    @apply font-serif text-[2.25rem] font-normal leading-[1.1] tracking-[-0.01em] text-dough-espresso sm:text-[2.75rem] lg:text-[3.25rem];
+  }
+
+  .heading-section-light {
+    @apply font-serif text-[2.25rem] font-normal leading-[1.1] tracking-[-0.01em] text-dough-chalk sm:text-[2.75rem] lg:text-[3.25rem];
   }
 
   .text-body {
-    @apply text-base font-light leading-[1.85] text-costa-cream/60 sm:text-[16px];
+    @apply text-base font-light leading-[1.85] text-dough-charcoal/60 sm:text-[16px];
+  }
+
+  .text-body-light {
+    @apply text-base font-light leading-[1.85] text-dough-chalk/60 sm:text-[16px];
   }
 
   .text-body-lg {
-    @apply text-base font-light leading-[1.85] text-costa-cream/80 sm:text-lg;
+    @apply text-base font-light leading-[1.85] text-dough-chalk/75 sm:text-lg;
   }
 
   .text-editorial {
-    @apply font-serif text-sm italic tracking-wide text-costa-caramel/85 sm:text-[15px];
+    @apply font-serif text-sm italic tracking-wide text-dough-crust/70 sm:text-[15px];
+  }
+
+  .text-editorial-light {
+    @apply font-serif text-sm italic tracking-wide text-dough-oak/75 sm:text-[15px];
   }
 
   .text-supporting {
-    @apply text-[9px] font-light uppercase tracking-[0.28em] text-costa-caramel/50 sm:text-[10px];
+    @apply text-[9px] font-light uppercase tracking-[0.28em] text-dough-chalk/40 sm:text-[10px];
   }
 
   /* ── Buttons ── */
+  /* Dark on light bg — the standard CTA */
   .btn-primary {
-    @apply inline-flex min-w-[180px] items-center justify-center border border-costa-espresso/50 bg-costa-espresso-deep px-10 py-3.5 text-[11px] font-normal uppercase tracking-[0.22em] text-costa-cream transition-all duration-500 ease-expo hover:border-costa-caramel/70 hover:bg-costa-espresso hover:-translate-y-0.5;
+    @apply inline-flex min-w-[180px] items-center justify-center border border-dough-espresso bg-dough-espresso px-10 py-3.5 text-[11px] font-normal uppercase tracking-[0.22em] text-dough-chalk transition-all duration-500 ease-expo hover:bg-dough-crust hover:border-dough-crust hover:-translate-y-0.5;
   }
 
+  /* Light outline — for use on the hero over image */
+  .btn-primary-hero {
+    @apply inline-flex min-w-[200px] items-center justify-center border border-dough-chalk/55 bg-dough-espresso/50 px-10 py-4 text-[11px] font-normal uppercase tracking-[0.22em] text-dough-chalk backdrop-blur-[2px] transition-all duration-500 ease-expo hover:border-dough-chalk/90 hover:bg-dough-espresso/75 hover:-translate-y-0.5;
+  }
+
+  /* Small — navbar desktop */
   .btn-primary-sm {
-    @apply inline-flex items-center justify-center border border-costa-espresso/50 bg-costa-espresso-deep/90 px-5 py-2 text-[9px] font-normal uppercase tracking-[0.22em] text-costa-cream transition-all duration-500 ease-expo hover:border-costa-caramel/70 hover:bg-costa-espresso hover:-translate-y-0.5;
+    @apply inline-flex items-center justify-center border border-dough-espresso bg-dough-espresso px-5 py-2 text-[9px] font-normal uppercase tracking-[0.22em] text-dough-chalk transition-all duration-500 ease-expo hover:bg-dough-crust hover:border-dough-crust;
   }
 
-  .btn-secondary {
-    @apply relative inline-flex min-w-[180px] items-center justify-center px-8 py-3.5 text-[11px] font-light uppercase tracking-[0.22em] text-costa-cream/65 transition-colors duration-500 ease-expo hover:text-costa-cream/90;
-  }
-
-  .btn-secondary-line {
-    @apply absolute bottom-2.5 left-1/2 h-px w-10 -translate-x-1/2 bg-costa-cream/25 transition-all duration-500 ease-expo group-hover:w-[calc(100%-2rem)] group-hover:bg-costa-caramel/60;
+  /* Small light — navbar over hero */
+  .btn-primary-sm-light {
+    @apply inline-flex items-center justify-center border border-dough-chalk/45 bg-transparent px-5 py-2 text-[9px] font-normal uppercase tracking-[0.22em] text-dough-chalk transition-all duration-500 ease-expo hover:border-dough-chalk/85 hover:bg-dough-chalk/10;
   }
 
   /* ── Navigation ── */
   .nav-link {
-    @apply relative text-[9px] font-light uppercase tracking-[0.22em] text-costa-cream/60 transition-colors duration-400 ease-expo hover:text-costa-cream/90;
+    @apply relative text-[9px] font-light uppercase tracking-[0.22em] transition-colors duration-400 ease-expo;
   }
 
   .nav-link-line {
-    @apply absolute -bottom-1.5 left-0 h-px w-0 bg-costa-caramel/60 transition-all duration-400 ease-expo group-hover:w-full;
+    @apply absolute -bottom-1.5 left-0 h-px w-0 bg-dough-terra/60 transition-all duration-400 ease-expo group-hover:w-full;
   }
 
   /* ── Dividers ── */
   .divider-subtle {
-    @apply border-t border-costa-cream/[0.05];
+    @apply border-t border-dough-charcoal/[0.08];
   }
 
-  .divider-vertical {
-    @apply border-l border-costa-cream/[0.05];
+  .divider-subtle-light {
+    @apply border-t border-dough-chalk/[0.08];
   }
 
-  /* ── Statistics ── */
-  .stat-value {
-    @apply font-serif text-[2rem] font-light leading-none text-costa-cream sm:text-4xl lg:text-[2.85rem];
-  }
-
-  .stat-label {
-    @apply mt-2.5 text-[9px] font-light uppercase tracking-[0.24em] text-costa-cream/50 sm:text-[10px];
-  }
-
-  .heading-dish {
-    @apply font-serif text-3xl font-light leading-[1.15] tracking-wide text-costa-cream sm:text-4xl lg:text-[2.5rem];
-  }
-
-  /* ── Editorial ── */
-  .editorial-image:hover img {
-    @apply scale-[1.04];
-  }
-
-  .experience-panel {
-    @apply border border-costa-cream/[0.04] bg-costa-cream/[0.01] p-9 transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/20 hover:bg-costa-espresso-deep/[0.06] sm:p-10 lg:p-12;
-  }
-
-  .review-panel {
-    @apply flex h-full flex-col border border-costa-cream/[0.04] bg-costa-cream/[0.01] p-8 transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/20 hover:bg-costa-espresso-deep/[0.05] sm:p-9 lg:p-10;
+  /* ── Process Step ── */
+  .process-step-number {
+    @apply font-serif text-[5rem] font-normal leading-none text-dough-linen sm:text-[7rem] lg:text-[8rem];
   }
 
   /* ── Forms ── */
-  .reservation-form-panel {
-    @apply border border-costa-cream/[0.04] bg-costa-cream/[0.01] p-8 transition-all duration-500 ease-expo hover:border-costa-cream/[0.06] hover:shadow-[0_8px_40px_rgba(0,0,0,0.4)] sm:p-10 lg:p-12;
+  .preorder-panel {
+    @apply border border-dough-charcoal/[0.06] bg-dough-chalk p-8 sm:p-10 lg:p-12;
   }
 
   .form-field {
@@ -142,33 +147,35 @@
   }
 
   .form-label {
-    @apply mb-2 block text-[9px] font-light uppercase tracking-[0.28em] text-costa-cream/45 sm:text-[10px];
+    @apply mb-2 block text-[9px] font-light uppercase tracking-[0.28em] text-dough-charcoal/40 sm:text-[10px];
   }
 
   .form-input {
-    @apply w-full border-b border-costa-cream/10 bg-transparent py-3.5 text-sm font-light text-costa-cream/85 placeholder:text-costa-cream/20 transition-all duration-400 ease-expo focus:border-costa-caramel/60 focus:outline-none;
+    @apply w-full border-b border-dough-charcoal/12 bg-transparent py-3.5 text-sm font-light text-dough-espresso/85 placeholder:text-dough-charcoal/25 transition-all duration-400 ease-expo focus:border-dough-terra/60 focus:outline-none;
   }
 
   .form-select {
     @apply cursor-pointer appearance-none pr-6;
   }
 
-  .form-textarea {
-    @apply border border-white/[0.06] px-4 py-3.5 focus:border-costa-caramel/50;
+  /* ── Community cards ── */
+  .community-card-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-dough-espresso/65 via-dough-espresso/72 to-dough-espresso/88 transition-opacity duration-500 ease-expo group-hover:opacity-90;
   }
 
-  .location-card {
-    @apply relative min-h-[18rem] overflow-hidden border border-white/[0.05] transition-all duration-500 ease-expo hover:border-costa-caramel/20 sm:min-h-[22rem];
+  /* ── Gallery ── */
+  .gallery-item {
+    @apply relative overflow-hidden bg-dough-linen text-left transition-all duration-700 ease-expo;
   }
 
-  .cta-block {
-    @apply relative;
+  .gallery-item img {
+    @apply h-full w-full object-cover transition-transform duration-700 ease-expo;
   }
 }
 
-/* Select arrow — plain CSS to avoid Tailwind URL parsing issues */
+/* Select arrow — plain CSS */
 .form-select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath stroke='%23ffffff40' stroke-width='0.75' d='M1 1.5 6 6.5 11 1.5'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath stroke='%233A322840' stroke-width='0.75' d='M1 1.5 6 6.5 11 1.5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0 center;
   background-size: 12px 8px;
@@ -224,5 +231,14 @@
 
   .menu-fade-in {
     animation: menu-fade-in 0.35s ease-expo both;
+  }
+
+  @keyframes line-grow {
+    from { width: 0; }
+    to   { width: 2rem; }
+  }
+
+  .animate-line-grow {
+    animation: line-grow 0.9s ease-expo both;
   }
 }

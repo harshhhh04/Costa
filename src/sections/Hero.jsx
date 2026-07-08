@@ -1,131 +1,113 @@
-import heroBackground from '../../assets/images/5.jpeg'
+import { SIRDOUGH_IMAGES } from '../data/contact.js'
 
-const DEFAULTS = {
-  backgroundImage: heroBackground,
-  label: 'Costa Coffee Sector 35C, Chandigarh',
-  brandTagline: '',
-  heading: 'Your usual table is waiting.',
-  subheading:
-    'Slow mornings. Warm cups. Book breaks, and conversations that run long.',
-  primaryCta: { label: 'Find Us', href: '#contact' },
-  secondaryCta: { label: 'View Menu', href: '#menu' },
-  rating: 4.0,
-  reviewCount: 171,
+const BAKERY_HOURS = {
+  opensAt:  7 * 60,       // 7:00 AM
+  closesAt: 14 * 60,      // 2:00 PM
 }
 
-const BUSINESS_HOURS = {
-  opensAt: 7 * 60 + 30,
-  closesAt: 23 * 60,
+function getOpenStatus() {
+  const now     = new Date()
+  const minutes = now.getHours() * 60 + now.getMinutes()
+  const day     = now.getDay() // 0 = Sunday, 1 = Monday …
+
+  if (day === 1) return 'Closed today · Opens Tuesday 7:00 AM'
+
+  const isOpen = minutes >= BAKERY_HOURS.opensAt && minutes < BAKERY_HOURS.closesAt
+  return isOpen
+    ? 'Open now · Closes 2:00 PM'
+    : 'Closed · Opens tomorrow 7:00 AM'
 }
 
-function getOpenStatusLabel() {
-  const now = new Date()
-  const currentMinutes = now.getHours() * 60 + now.getMinutes()
-  const isOpen =
-    currentMinutes >= BUSINESS_HOURS.opensAt &&
-    currentMinutes < BUSINESS_HOURS.closesAt
-
-  return isOpen ? 'Open Now - Closes at 11:00 PM' : 'Closed Now - Opens at 7:30 AM'
-}
-
-function Hero({
-  backgroundImage = DEFAULTS.backgroundImage,
-  label = DEFAULTS.label,
-  brandTagline = DEFAULTS.brandTagline,
-  heading = DEFAULTS.heading,
-  subheading = DEFAULTS.subheading,
-  primaryCta = DEFAULTS.primaryCta,
-  secondaryCta = DEFAULTS.secondaryCta,
-  rating = DEFAULTS.rating,
-  reviewCount = DEFAULTS.reviewCount,
-}) {
-  const openStatusLabel = getOpenStatusLabel()
+function Hero() {
+  const openStatus = getOpenStatus()
 
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-costa-espresso-deep"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-dough-espresso"
     >
-      {/* Background image — sharp, atmospheric */}
+      {/* Background — real Sir Dough image */}
       <div
-        className="absolute inset-0 scale-105 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 scale-105 bg-cover bg-center bg-no-repeat transition-transform duration-[8s] ease-out"
         style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundPosition: 'center 34%',
+          backgroundImage: `url(${SIRDOUGH_IMAGES.heroImg})`,
+          backgroundPosition: 'center 38%',
         }}
         aria-hidden="true"
       />
 
-      {/* Overlays — lighter centre, image remains visible */}
+      {/* Warm amber overlays — not cold black */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-costa-espresso-deep/70 via-costa-espresso/35 to-costa-espresso-deep/80"
+        className="absolute inset-0 bg-gradient-to-b from-dough-espresso/80 via-dough-crust/25 to-dough-espresso/88"
         aria-hidden="true"
       />
       <div
-        className="absolute inset-0 bg-gradient-to-t from-costa-espresso-deep/55 via-transparent to-transparent"
+        className="absolute inset-0 bg-gradient-to-t from-dough-espresso/65 via-transparent to-transparent"
         aria-hidden="true"
       />
+      {/* Top darkening for navbar legibility */}
       <div
-        className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-black/75 via-black/40 to-transparent"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,rgba(0,0,0,0.25)_100%)]"
+        className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-dough-espresso/80 via-dough-espresso/30 to-transparent"
         aria-hidden="true"
       />
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-3xl -translate-y-[10%] px-6 py-20 text-center sm:px-8">
-        {/* 1 — Primary heading */}
+      {/* Main content */}
+      <div className="relative z-10 mx-auto w-full max-w-3xl -translate-y-[8%] px-6 py-20 text-center sm:px-8">
+
+        {/* Bakery identifier */}
+        <p
+          className="hero-fade-in text-supporting mb-8 sm:mb-10"
+          style={{ animationDelay: '0.05s' }}
+        >
+          Artisan Bakery &nbsp;·&nbsp; Chandigarh
+        </p>
+
+        {/* Primary headline */}
         <h1
           className="hero-fade-in heading-hero"
           style={{ animationDelay: '0.15s' }}
         >
-          {heading}
+          Good Bread{' '}
+          <br className="hidden sm:block" />
+          <span className="italic">Refuses To</span>
+          <br />
+          Hurry.
         </h1>
 
-        {/* 2 — Subheading */}
+        {/* Sub-headline */}
         <p
-          className="hero-fade-in text-body-lg mx-auto mt-6 max-w-sm sm:mt-7"
+          className="hero-fade-in text-body-lg mx-auto mt-7 max-w-sm sm:mt-8"
           style={{ animationDelay: '0.28s' }}
         >
-          {subheading}
+          72 hours of patience. Real fermentation.
+          <br className="hidden sm:block" />
+          Chandigarh's first true sourdough bakery.
         </p>
 
-        {/* 3 & 4 — CTAs */}
+        {/* Single CTA — one intention, one action */}
         <div
-          className="hero-fade-in mt-10 flex flex-col items-center justify-center gap-6 sm:mt-12 sm:flex-row sm:gap-8"
-          style={{ animationDelay: '0.4s' }}
+          className="hero-fade-in mt-10 flex justify-center sm:mt-12"
+          style={{ animationDelay: '0.42s' }}
         >
-          <a href={primaryCta.href} className="btn-primary w-full sm:w-auto">
-            {primaryCta.label}
-          </a>
-
-          <a
-            href={secondaryCta.href}
-            className="group inline-flex items-center text-[11px] font-normal uppercase tracking-[0.22em] text-costa-cream/65 transition-colors duration-500 ease-expo hover:text-costa-cream w-full sm:w-auto justify-center"
-          >
-            {secondaryCta.label}
-            <span className="ml-2.5 transition-transform duration-500 ease-expo group-hover:translate-x-1">→</span>
+          <a href="#preorder" className="btn-primary-hero">
+            Reserve Tomorrow's Loaf
           </a>
         </div>
 
-        {/* 5 — Supporting tagline */}
+        {/* Open status */}
         <p
-          className="hero-fade-in text-editorial mt-12 sm:mt-14"
-          style={{ animationDelay: '0.52s' }}
+          className="hero-fade-in text-supporting mt-12 sm:mt-14"
+          style={{ animationDelay: '0.58s' }}
         >
-          {brandTagline}
-        </p>
-
-        {/* 6 — Supporting label + Open Status */}
-        <p
-          className="hero-fade-in text-supporting mt-5 sm:mt-6"
-          style={{ animationDelay: '0.6s' }}
-        >
-          {label} &nbsp;·&nbsp; {openStatusLabel}
+          {openStatus}
         </p>
       </div>
+
+      {/* Bottom edge — fade into the next section */}
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-dough-linen to-transparent"
+        aria-hidden="true"
+      />
     </section>
   )
 }

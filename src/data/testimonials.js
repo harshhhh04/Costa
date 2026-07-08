@@ -1,31 +1,30 @@
 export const TESTIMONIALS_SECTION = {
   label: 'Voices',
-  heading: 'Conversations at the next table.',
+  heading: 'From our regulars.',
   subheading:
-    'What our regulars say about their usual spot.',
+    'Bread builds habits. Here\'s what the morning crowd says.',
 }
 
 export const TESTIMONIALS_SUMMARY = {
-  rating: 4.0,
+  rating: 4.8,
   maxRating: 5,
-  totalReviews: '171',
+  totalReviews: '340+',
 }
 
 export const TESTIMONIALS = [
   {
     id: 't1',
     quote:
-      'Best cappuccino I found in Chandigarh so far, and the ambience stays warm even during busy hours.',
+      'I\'ve had sourdough in London, Berlin, and Tokyo. Sir Dough\'s country loaf belongs in that conversation. In Chandigarh. That still surprises me.',
   },
   {
     id: 't2',
     quote:
-      'Comfortable seating, friendly staff, and cafe mocha done right. Easy place to work for a couple of hours.',
+      'The croissant shattered. Then it melted. I don\'t know how both can be true. I\'ve been back every Saturday for three months.',
   },
   {
     id: 't3',
     quote:
-      'Spacious setup with a relaxing coffee aroma. Good spot to unwind, talk, or just sit with a book.',
+      'We reserve on WhatsApp the night before. The kids ask what bread we\'re getting. That\'s how it\'s become part of our Sunday.',
   },
 ]
-

@@ -1,47 +1,43 @@
-import storefrontImage from '../../assets/images/5.jpeg'
-import wideInteriorImage from '../../assets/images/6.jpeg'
-import cozyInteriorImage from '../../assets/images/7.jpeg'
-import tableCupImage from '../../assets/images/1.jpeg'
-import featureWallImage from '../../assets/images/4.jpeg'
-import interiorPerspectiveImage from '../../assets/images/11.jpeg'
+import heroBreadImage   from '../../assets/images/hero-bread.png'
+import serveTableImage  from '../../assets/images/serve-table.png'
+import { SIRDOUGH_IMAGES } from './contact.js'
 
 export const GALLERY_SECTION = {
-  label: 'The Space',
-  heading: 'Cozy, not rustic. Warm, not loud.',
+  label: 'Made Here',
+  heading: 'Made here,\nevery morning.',
   subheading:
-    'Familiar tables, quiet corners, and daily coffee moments.',
+    'From the first score to the last slice. A few frames from inside.',
 }
 
 export const GALLERY_IMAGES = [
   {
-    id: 'gallery-storefront',
-    src: storefrontImage,
-    alt: 'Costa Coffee exterior storefront in Sector 35C',
+    id: 'gallery-interior-warm',
+    src: SIRDOUGH_IMAGES.warmInterior,
+    alt: 'Sir Dough warm interior with ambient lighting and seating',
   },
   {
-    id: 'gallery-wide-interior',
-    src: wideInteriorImage,
-    alt: 'Wide interior seating view of the cafe',
+    id: 'gallery-bread-fresh',
+    src: heroBreadImage,
+    alt: 'Freshly baked artisan sourdough loaf with dark crust',
   },
   {
-    id: 'gallery-cozy-seating',
-    src: cozyInteriorImage,
-    alt: 'Cozy seating zone with tables and chairs',
+    id: 'gallery-spacious',
+    src: SIRDOUGH_IMAGES.spaciousLayout,
+    alt: 'Spacious Sir Dough cafe layout with natural light',
   },
   {
-    id: 'gallery-cup-on-table',
-    src: tableCupImage,
-    alt: 'Costa coffee cup on a table with ambient seating in background',
+    id: 'gallery-outdoor',
+    src: SIRDOUGH_IMAGES.outdoorSeating,
+    alt: 'Outdoor seating area at Sir Dough',
   },
   {
-    id: 'gallery-feature-wall',
-    src: featureWallImage,
-    alt: 'Feature wall inside the cafe',
+    id: 'gallery-hero-shot',
+    src: SIRDOUGH_IMAGES.heroImg,
+    alt: 'Sir Dough signature coffee and pastry',
   },
   {
-    id: 'gallery-interior-perspective',
-    src: interiorPerspectiveImage,
-    alt: 'Another interior perspective with open seating',
+    id: 'gallery-serve-table',
+    src: serveTableImage,
+    alt: 'Sliced sourdough on wooden table with coffee and butter',
   },
 ]
-

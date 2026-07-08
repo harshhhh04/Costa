@@ -1,54 +1,46 @@
-import interiorWideImage from '../../assets/images/6.jpeg'
-import interiorSeatingImage from '../../assets/images/7.jpeg'
-import interiorCornerImage from '../../assets/images/10.jpeg'
-import interiorTablesImage from '../../assets/images/11.jpeg'
+import { SIRDOUGH_IMAGES } from './contact.js'
 
 export const COMMUNITY_SECTION = {
-  label: 'Gatherings',
-  heading: 'A local living room.',
+  label: 'The Ritual',
+  heading: 'A morning worth\nwaking up for.',
   subheading:
-    'Books, study sessions, and slow hours that make this outlet feel like a neighborhood home.',
+    'Some rituals deserve better bread. Sir Dough is where Chandigarh\'s slow mornings find their anchor.',
 }
 
 export const COMMUNITY_CARDS = [
   {
-    id: 'book-club',
-    title: 'Weekly Book Club',
+    id: 'morning-ritual',
+    title: 'The Morning Ritual',
     description:
-      'Settle in with a short read, a hot cup of mocha, and quiet company.',
-    icon: 'book',
-    image: interiorCornerImage,
+      'First loaf. First coffee. The quiet fifteen minutes before the day begins.',
+    image: SIRDOUGH_IMAGES.warmInterior,
   },
   {
-    id: 'study-evenings',
-    title: 'Study Evenings',
+    id: 'weekend-brunch',
+    title: 'Weekend Brunch',
     description:
-      'Focused hours in cozy seating and soft lighting after classes end.',
-    icon: 'study',
-    image: interiorWideImage,
+      'Saturday tartines, freshly laminated pastries, and no reason to rush anywhere.',
+    image: SIRDOUGH_IMAGES.outdoorSeating,
   },
   {
-    id: 'coffee-meetups',
-    title: 'Neighborhood Meetups',
+    id: 'family-tables',
+    title: 'Family Tables',
     description:
-      'Familiar tables where friends connect over long conversations and cappuccinos.',
-    icon: 'meet',
-    image: interiorSeatingImage,
+      'A loaf that feeds six. Sunday mornings. The kind that slow down time.',
+    image: SIRDOUGH_IMAGES.spaciousLayout,
   },
   {
-    id: 'freelancer-fridays',
-    title: 'Freelancer Fridays',
+    id: 'slow-breakfast',
+    title: 'Slow Breakfast',
     description:
-      'A warm, quiet space for creators and remote workers before the weekend starts.',
-    icon: 'study',
-    image: interiorTablesImage,
+      'A book. A pour over. Toast with cultured butter. The world can wait.',
+    image: SIRDOUGH_IMAGES.warmInterior,
   },
   {
-    id: 'weekend-conversations',
-    title: 'Sunday Mornings',
+    id: 'the-regulars',
+    title: 'The Regulars',
     description:
-      'Slow starts with coffee, books, and long talks that linger into the afternoon.',
-    icon: 'weekend',
-    image: interiorWideImage,
+      'Every bakery has them. The ones who arrive before we open and already know what they want.',
+    image: SIRDOUGH_IMAGES.outdoorSeating,
   },
 ]

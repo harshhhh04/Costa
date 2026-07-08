@@ -7,36 +7,49 @@ function CommunityCard({ card, index }) {
   return (
     <article
       ref={ref}
-      className={`group scroll-reveal relative overflow-hidden border border-transparent bg-transparent p-9 transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/15 sm:last:col-span-2 lg:last:col-span-1 ${
+      className={`group scroll-reveal relative overflow-hidden min-h-[20rem] sm:min-h-[22rem] ${
         isVisible ? 'is-visible' : ''
       }`}
-      style={{ transitionDelay: `${index * 0.08}s` }}
+      style={{ transitionDelay: `${index * 0.07}s` }}
     >
+      {/* Background image */}
       <img
         src={card.image}
         alt=""
         loading="lazy"
-        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-expo group-hover:scale-[1.03]"
         aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-expo group-hover:scale-[1.04]"
       />
+
+      {/* Warm dark gradient overlay */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-costa-espresso-deep/70 via-costa-espresso-deep/75 to-costa-espresso-deep/85 transition-opacity duration-500 ease-expo group-hover:opacity-90"
+        className="absolute inset-0 bg-gradient-to-b from-dough-espresso/60 via-dough-espresso/72 to-dough-espresso/90 transition-opacity duration-500 ease-expo group-hover:opacity-95"
         aria-hidden="true"
       />
 
-      <div className="relative mb-6 flex items-baseline justify-between">
-        <span className="font-serif text-3xl font-light italic text-costa-caramel/70">
+      {/* Content */}
+      <div className="relative h-full flex flex-col justify-end p-8 sm:p-9 lg:p-10">
+        {/* Number */}
+        <span
+          className="font-serif text-2xl font-normal italic text-dough-oak/50 mb-5"
+          aria-hidden="true"
+        >
           {String(index + 1).padStart(2, '0')}
         </span>
+
+        {/* Accent line */}
+        <span
+          className="mb-5 block h-px w-7 bg-dough-terra/50 transition-all duration-500 ease-expo group-hover:w-14 group-hover:bg-dough-terra/75"
+          aria-hidden="true"
+        />
+
+        <h3 className="font-serif text-[1.5rem] font-normal leading-[1.25] text-dough-chalk sm:text-[1.65rem]">
+          {card.title}
+        </h3>
+        <p className="mt-4 text-[13px] font-light leading-[1.8] text-dough-chalk/55 max-w-[18rem]">
+          {card.description}
+        </p>
       </div>
-
-      <span
-        className="relative mb-6 block h-px w-8 bg-costa-caramel/35 transition-all duration-500 ease-expo group-hover:w-14 group-hover:bg-costa-caramel/60"
-        aria-hidden="true"
-      />
-
-      <h3 className="relative heading-dish text-2xl sm:text-3xl">{card.title}</h3>
-      <p className="relative text-body mt-5 max-w-[18rem]">{card.description}</p>
     </article>
   )
 }
@@ -47,25 +60,49 @@ function Community() {
   return (
     <section
       id="community"
-      className="scroll-mt-24 section-padding relative bg-costa-espresso-deep"
+      className="scroll-mt-24 section-padding relative bg-dough-espresso"
     >
       <div className="container-wide">
+
+        {/* Header */}
         <header
           ref={headerRef}
           className={`scroll-reveal mx-auto mb-16 max-w-2xl text-center sm:mb-20 lg:mb-24 ${
             headerVisible ? 'is-visible' : ''
           }`}
         >
-          <p className="text-label mb-7">{COMMUNITY_SECTION.label}</p>
-          <h2 className="heading-section">{COMMUNITY_SECTION.heading}</h2>
-          <p className="text-body mx-auto mt-8 max-w-md sm:mt-10">
+          <p className="text-label-light mb-7">{COMMUNITY_SECTION.label}</p>
+          <h2 className="heading-section-light">
+            {COMMUNITY_SECTION.heading.split('\n').map((line, i) => (
+              <span key={i}>
+                {i > 0 && (
+                  <>
+                    <br />
+                    <span className="italic text-dough-oak">{line}</span>
+                  </>
+                )}
+                {i === 0 && line}
+              </span>
+            ))}
+          </h2>
+          <p className="text-body-light mx-auto mt-8 max-w-md sm:mt-10">
             {COMMUNITY_SECTION.subheading}
           </p>
         </header>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Card grid — last card spans 2 columns on md, 1 on lg */}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
           {COMMUNITY_CARDS.map((card, index) => (
-            <CommunityCard key={card.id} card={card} index={index} />
+            <div
+              key={card.id}
+              className={
+                index === COMMUNITY_CARDS.length - 1
+                  ? 'sm:col-span-2 lg:col-span-1'
+                  : ''
+              }
+            >
+              <CommunityCard card={card} index={index} />
+            </div>
           ))}
         </div>
       </div>
@@ -74,4 +111,3 @@ function Community() {
 }
 
 export default Community
-

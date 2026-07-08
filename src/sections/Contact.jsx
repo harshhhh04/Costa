@@ -73,15 +73,15 @@ function Contact() {
         {/* Section header */}
         <header
           ref={headerRef}
-          className={`scroll-reveal mb-16 max-w-xl sm:mb-20 lg:mb-24 ${
+          className={`scroll-reveal mb-14 max-w-2xl text-center sm:mb-16 lg:mb-20 ${
             headerVisible ? 'is-visible' : ''
           }`}
         >
-          <p className="text-label mb-7">{CONTACT_HEADER.label}</p>
-
-          <h2 className="heading-section">{CONTACT_HEADER.heading}</h2>
-
-          <p className="text-body mt-8 max-w-md sm:mt-10">
+          <p className="text-label mb-7">Visit Us</p>
+          <h2 className="heading-section">
+            Your <span className="italic text-costa-caramel font-light">usual table</span> is waiting.
+          </h2>
+          <p className="text-body mx-auto mt-8 max-w-md sm:mt-10">
             {CONTACT_HEADER.subheading}
           </p>
         </header>

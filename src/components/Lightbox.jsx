@@ -43,7 +43,7 @@ function Lightbox({ open, images, startIndex = 0, onClose }) {
         if (e.target === e.currentTarget) onClose()
       }}
     >
-      <div className="relative w-full max-w-4xl overflow-hidden rounded-[2px] border border-white/[0.08] bg-costa-espresso-deep">
+      <div className="relative w-full max-w-4xl overflow-hidden rounded-[2px] border border-white/[0.08] bg-dough-espresso">
         <div className="flex items-center justify-between gap-4 border-b border-white/[0.06] px-4 py-3">
           <p className="text-[11px] font-light uppercase tracking-[0.22em] text-white/45">
             {activeIndex + 1} / {images.length}
@@ -84,7 +84,7 @@ function Lightbox({ open, images, startIndex = 0, onClose }) {
           <img
             src={active.src}
             alt={active.alt}
-            className="max-h-[70dvh] w-full object-contain bg-costa-espresso-deep"
+            className="max-h-[70dvh] w-full object-contain bg-dough-espresso"
           />
         </div>
       </div>
