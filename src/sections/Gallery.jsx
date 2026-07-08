@@ -42,18 +42,18 @@ function Gallery() {
                   setStartIndex(idx)
                   setLightboxOpen(true)
                 }}
-                className="group relative overflow-hidden rounded-[2px] border border-white/[0.06] bg-white/[0.01] text-left transition-all duration-500 hover:-translate-y-1 hover:border-white/[0.10]"
+                className="group relative overflow-hidden rounded-[2px] border border-costa-cream/[0.05] bg-costa-cream/[0.01] text-left transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/25"
                 aria-label={`Open image: ${img.alt}`}
               >
                 <img
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
-                  className="h-60 w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
+                  className="h-60 w-full object-cover transition-transform duration-700 ease-expo group-hover:scale-[1.04]"
                 />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.16)_0%,rgba(0,0,0,0)_55%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(243,239,230,0.06)_0%,rgba(0,0,0,0)_55%)]" />
                 <div className="absolute inset-x-0 bottom-0 px-4 py-3">
-                  <p className="text-[10px] font-light uppercase tracking-[0.22em] text-white/0 transition-colors duration-300 group-hover:text-white/55">
+                  <p className="text-[10px] font-light uppercase tracking-[0.22em] text-costa-cream/0 transition-colors duration-300 group-hover:text-costa-cream/55">
                     View
                   </p>
                 </div>

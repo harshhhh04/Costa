@@ -123,7 +123,7 @@ function Hero({
           ].map((tag) => (
             <span
               key={tag}
-              className="inline-flex items-center rounded-[2px] border border-white/[0.10] bg-black/20 px-2 py-1 text-[8px] uppercase tracking-[0.15em] text-white/60 sm:px-3 sm:py-1.5 sm:text-[9px] sm:tracking-[0.2em]"
+              className="inline-flex items-center rounded-[2px] border border-costa-caramel/20 bg-costa-caramel/5 px-2 py-1 text-[8px] uppercase tracking-[0.15em] text-costa-caramel/90 sm:px-3 sm:py-1.5 sm:text-[9px] sm:tracking-[0.2em]"
             >
               {tag}
             </span>
@@ -151,12 +151,12 @@ function Hero({
           className="hero-fade-in divider-subtle mx-auto mt-14 max-w-xs pt-8 sm:mt-16 sm:pt-10"
           style={{ animationDelay: '0.72s' }}
         >
-          <div className="flex items-center justify-center gap-3 text-[11px] font-light tracking-[0.12em] text-white/45">
-            <span className="text-amber-400/70" aria-hidden="true">
+          <div className="flex items-center justify-center gap-3 text-[11px] font-light tracking-[0.12em] text-costa-cream/50">
+            <span className="text-costa-caramel" aria-hidden="true">
               ★
             </span>
-            <span className="text-white/70">{rating} Google Rating</span>
-            <span className="text-white/20" aria-hidden="true">
+            <span className="text-costa-cream/80">{rating} Google Rating</span>
+            <span className="text-costa-cream/30" aria-hidden="true">
               ·
             </span>
             <span>{reviewCount} Reviews</span>

@@ -4,7 +4,7 @@ import { useInView } from '../hooks/useInView.js'
 
 function MenuItemCard({ item }) {
   return (
-    <article className="group overflow-hidden rounded-[2px] border border-white/[0.06] bg-white/[0.01] transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/25 hover:bg-white/[0.02]">
+    <article className="group overflow-hidden rounded-[2px] border border-costa-cream/[0.05] bg-costa-cream/[0.01] transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/25 hover:bg-costa-cream/[0.02]">
       <div className="relative">
         <img
           src={item.image}
@@ -13,14 +13,14 @@ function MenuItemCard({ item }) {
           className="h-44 w-full object-cover transition-transform duration-700 ease-expo group-hover:scale-[1.04]"
         />
         <div
-          className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.14)_0%,rgba(0,0,0,0)_60%)]"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(243,239,230,0.06)_0%,rgba(0,0,0,0)_60%)]"
           aria-hidden="true"
         />
       </div>
 
       <div className="space-y-3 p-4.5 sm:p-5">
         <div className="flex items-start justify-between gap-4">
-          <h3 className="font-serif text-xl font-light text-white">
+          <h3 className="font-serif text-xl font-light text-costa-cream">
             {item.name}
           </h3>
           <p className="font-serif text-lg font-light text-costa-cream/90">
@@ -28,7 +28,7 @@ function MenuItemCard({ item }) {
           </p>
         </div>
 
-        <p className="text-body text-white/55">{item.description}</p>
+        <p className="text-body text-costa-cream/60">{item.description}</p>
       </div>
     </article>
   )
@@ -86,8 +86,8 @@ function Menu() {
                     aria-selected={selected}
                     className={`inline-flex whitespace-nowrap rounded-[2px] border px-4 py-2 text-[11px] font-light uppercase tracking-[0.22em] transition-all duration-500 ease-expo ${
                       selected
-                        ? 'border-costa-caramel/60 bg-white/[0.06] text-white'
-                        : 'border-white/[0.10] bg-white/[0.01] text-white/60 hover:text-white'
+                        ? 'border-costa-caramel/60 bg-costa-cream/[0.05] text-costa-cream'
+                        : 'border-costa-cream/[0.08] bg-costa-cream/[0.01] text-costa-cream/60 hover:text-costa-cream'
                     }`}
                     onClick={() => setActiveCategoryId(category.id)}
                   >

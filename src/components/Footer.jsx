@@ -57,7 +57,7 @@ function SocialIcon({ platform }) {
 
 function Footer() {
   return (
-    <footer className="border-t border-white/[0.06] bg-costa-espresso-deep">
+    <footer className="border-t border-costa-cream/[0.05] bg-costa-espresso-deep">
       <div className="container-wide py-14 sm:py-16 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[1fr_auto_1fr] lg:items-start lg:gap-8">
           {/* Logo */}
@@ -66,7 +66,7 @@ function Footer() {
               className="inline-block h-4 w-2.5 rounded-[1px] border border-costa-caramel/60 bg-costa-espresso-deep/40 transition-colors duration-300 group-hover:border-costa-caramel/80"
               aria-hidden="true"
             />
-            <span className="font-serif text-lg tracking-[0.18em] text-white/95 sm:text-xl">
+            <span className="font-serif text-lg tracking-[0.18em] text-costa-cream/95 sm:text-xl">
               COSTA
             </span>
           </a>
@@ -78,7 +78,7 @@ function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-[9px] font-light uppercase tracking-[0.22em] text-white/45 transition-colors duration-400 hover:text-white/85"
+                    className="text-[9px] font-light uppercase tracking-[0.22em] text-costa-cream/45 transition-colors duration-400 hover:text-costa-cream/85"
                   >
                     {link.label}
                   </a>
@@ -95,10 +95,10 @@ function Footer() {
                 {FOOTER_OPENING_HOURS.map((row) => (
                   <div
                     key={row.day}
-                    className="flex items-center justify-between gap-8 text-[12px] font-light text-white/55"
+                    className="flex items-center justify-between gap-8 text-[12px] font-light text-costa-cream/55"
                   >
                     <span>{row.day}</span>
-                    <span className="text-white/35">{row.time}</span>
+                    <span className="text-costa-cream/35">{row.time}</span>
                   </div>
                 ))}
               </div>
@@ -127,10 +127,10 @@ function Footer() {
 
         {/* Copyright */}
         <div className="divider-subtle mt-12 pt-8 text-center sm:mt-14 sm:pt-10">
-          <p className="text-[10px] font-light tracking-[0.15em] text-white/25">
+          <p className="text-[10px] font-light tracking-[0.15em] text-costa-cream/25">
             {FOOTER_COPY.copyright}
           </p>
-          <p className="mt-2 font-serif text-xs italic tracking-wide text-white/20">
+          <p className="mt-2 font-serif text-xs italic tracking-wide text-costa-cream/20">
             {FOOTER_COPY.tagline}
           </p>
         </div>

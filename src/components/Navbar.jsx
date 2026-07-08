@@ -46,7 +46,7 @@ function Navbar() {
             className="inline-block h-4 w-2.5 rounded-[1px] border border-costa-caramel/50 bg-costa-espresso-deep/40 transition-colors duration-300 group-hover:border-costa-caramel/80"
             aria-hidden="true"
           />
-          <span className="font-serif text-lg tracking-[0.18em] text-white/95 sm:text-xl">
+          <span className="font-serif text-lg tracking-[0.18em] text-costa-cream/95 sm:text-xl">
             COSTA
           </span>
         </a>
@@ -78,17 +78,17 @@ function Navbar() {
           aria-expanded={isMenuOpen}
         >
           <span
-            className={`block h-px w-5 bg-white/90 transition-all duration-300 ${
+            className={`block h-px w-5 bg-costa-cream/90 transition-all duration-300 ${
               isMenuOpen ? 'translate-y-[3px] rotate-45' : ''
             }`}
           />
           <span
-            className={`block h-px w-5 bg-white/90 transition-all duration-300 ${
+            className={`block h-px w-5 bg-costa-cream/90 transition-all duration-300 ${
               isMenuOpen ? 'opacity-0' : ''
             }`}
           />
           <span
-            className={`block h-px w-5 bg-white/90 transition-all duration-300 ${
+            className={`block h-px w-5 bg-costa-cream/90 transition-all duration-300 ${
               isMenuOpen ? '-translate-y-[3px] -rotate-45' : ''
             }`}
           />
@@ -108,7 +108,7 @@ function Navbar() {
                 <a
                   href={link.href}
                   onClick={closeMenu}
-                  className="block border-b border-white/[0.04] py-4 text-[11px] font-light uppercase tracking-[0.22em] text-white/60 transition-colors duration-300 hover:text-white/90"
+                  className="block border-b border-costa-cream/[0.04] py-4 text-[11px] font-light uppercase tracking-[0.22em] text-costa-cream/60 transition-colors duration-300 hover:text-costa-cream/90"
                 >
                   {link.label}
                 </a>

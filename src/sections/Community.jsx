@@ -117,7 +117,7 @@ function CommunityCard({ card, index }) {
   return (
     <article
       ref={ref}
-      className={`group scroll-reveal relative overflow-hidden border border-white/[0.06] bg-white/[0.01] p-9 transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/20 sm:last:col-span-2 lg:last:col-span-1 ${
+      className={`group scroll-reveal relative overflow-hidden border border-costa-cream/[0.05] bg-costa-cream/[0.01] p-9 transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/20 sm:last:col-span-2 lg:last:col-span-1 ${
         isVisible ? 'is-visible' : ''
       }`}
       style={{ transitionDelay: `${index * 0.08}s` }}
@@ -130,7 +130,7 @@ function CommunityCard({ card, index }) {
         aria-hidden="true"
       />
       <div
-        className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/75 to-black/82 transition-opacity duration-500 ease-expo group-hover:opacity-90"
+        className="absolute inset-0 bg-gradient-to-b from-costa-espresso-deep/70 via-costa-espresso-deep/75 to-costa-espresso-deep/85 transition-opacity duration-500 ease-expo group-hover:opacity-90"
         aria-hidden="true"
       />
 

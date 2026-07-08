@@ -37,10 +37,10 @@ function About({
               <img
                 src={image}
                 alt={imageAlt}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover transition-transform duration-700 ease-expo hover:scale-[1.01]"
               />
               <div
-                className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent"
+                className="absolute inset-0 bg-gradient-to-t from-costa-espresso-deep/35 via-transparent to-transparent"
                 aria-hidden="true"
               />
             </div>
@@ -59,7 +59,7 @@ function About({
               ))}
             </h2>
 
-            <p className="text-body mt-10 max-w-[22rem] sm:mt-12">{paragraph}</p>
+            <p className="text-body mt-10 max-w-[26rem] text-costa-cream/70 sm:mt-12">{paragraph}</p>
 
             {/* Statistics */}
             <div className="divider-subtle mt-16 grid grid-cols-1 gap-y-6 pt-12 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-0 sm:pt-14 lg:mt-24">
@@ -68,7 +68,7 @@ function About({
                   key={stat.label}
                   className={
                     index > 0
-                      ? 'border-t border-white/[0.06] pt-6 sm:border-t-0 sm:border-l sm:pl-6 sm:pt-0 sm:pl-8'
+                      ? 'border-t border-costa-cream/10 pt-6 sm:border-t-0 sm:border-l sm:pl-6 sm:pt-0 sm:pl-8'
                       : ''
                   }
                 >

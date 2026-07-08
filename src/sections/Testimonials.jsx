@@ -11,24 +11,24 @@ function TestimonialCard({ quote, index }) {
   return (
     <blockquote
       ref={ref}
-      className={`scroll-reveal border border-white/[0.06] bg-white/[0.01] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-costa-caramel/20 ${
+      className={`scroll-reveal border border-costa-cream/[0.05] bg-costa-cream/[0.01] p-8 transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/25 ${
         isVisible ? 'is-visible' : ''
       }`}
       style={{ transitionDelay: `${index * 0.1}s` }}
     >
       <span
-        className="font-serif text-3xl leading-none text-costa-caramel/35"
+        className="font-serif text-3xl leading-none text-costa-caramel/50"
         aria-hidden="true"
       >
         &ldquo;
       </span>
 
-      <p className="mt-4 font-serif text-lg font-light italic leading-[1.7] text-white/75 sm:text-xl sm:leading-[1.75]">
+      <p className="mt-4 font-serif text-lg font-light italic leading-[1.7] text-costa-cream/85 sm:text-xl sm:leading-[1.75]">
         {quote}
       </p>
 
       <span
-        className="mt-8 block h-px w-10 bg-white/10"
+        className="mt-8 block h-px w-10 bg-costa-cream/10"
         aria-hidden="true"
       />
     </blockquote>
