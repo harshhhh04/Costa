@@ -14,7 +14,7 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 40)
+    const handleScroll = () => setIsScrolled(window.scrollY > 30)
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
@@ -31,7 +31,7 @@ function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      className={`sticky top-0 z-50 transition-[background-color,backdrop-filter,border-color,box-shadow,transform] duration-300 ${
         isScrolled || isMenuOpen ? 'navbar-shell-scrolled' : 'navbar-shell'
       }`}
     >

@@ -32,11 +32,11 @@
 
   /* ── Navbar ── */
   .navbar-shell {
-    @apply bg-costa-espresso-deep/30 backdrop-blur-[6px];
+    @apply border-b border-white/[0.06] bg-costa-espresso-deep;
   }
 
   .navbar-shell-scrolled {
-    @apply border-b border-white/[0.06] bg-costa-espresso-deep/85 backdrop-blur-md;
+    @apply border-b border-white/[0.06] bg-costa-espresso-deep/85 backdrop-blur-md shadow-[0_10px_40px_rgba(0,0,0,0.55)];
   }
 
   /* ── Typography ── */
