@@ -53,7 +53,7 @@ function Footer() {
             </a>
             <p className="max-w-[18rem] text-[12px] font-light leading-[1.85] text-dough-chalk/35">
               Artisan bakery, Chandigarh.<br />
-              Baked before sunrise. Ready by seven.
+              Baked before sunrise. Ready by ten.
             </p>
             <div>
               <p className="text-[9px] font-light uppercase tracking-[0.28em] text-dough-chalk/30 mb-2">Address</p>

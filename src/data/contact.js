@@ -16,18 +16,17 @@ export const CONTACT_HEADER = {
 }
 
 export const CONTACT_DETAILS = {
-  address: 'SCO 459-460, Sector 35C, Chandigarh — 160022',
-  addressShort: 'Sector 35C, Chandigarh',
-  whatsappNumber: '919872044474',
-  phone: '+91 98720 44474',
-  phoneHref: 'tel:+919872044474',
+  address: 'Ground Floor, SCO 35, Sector 7-C, Chandigarh, 160019',
+  addressShort: 'Sector 7-C, Chandigarh',
+  whatsappNumber: '916283371140',
+  phone: '+91 62833 71140',
+  phoneHref: 'tel:+916283371140',
   instagram: 'https://www.instagram.com/sirdoughofficial/',
   facebook: 'https://www.facebook.com/SirDoughBakehouseCafe',
   hours: [
-    { day: 'Tuesday – Sunday', time: '7:00 AM – 2:00 PM' },
-    { day: 'Monday', time: 'Closed' },
+    { day: 'Monday – Sunday', time: '10:00 AM – 11:00 PM' },
   ],
-  mapQuery: 'Sir Dough Bake House Sector 35C Chandigarh',
+  mapQuery: 'Sir Dough Bakehouse Cafe Sector 7-C Chandigarh',
 }
 
 export const FOOTER_NAV = [
@@ -45,8 +44,7 @@ export const FOOTER_SOCIAL = [
 ]
 
 export const FOOTER_OPENING_HOURS = [
-  { day: 'Tue – Sun', time: '7:00 AM – 2:00 PM' },
-  { day: 'Monday',    time: 'Closed'              },
+  { day: 'Mon – Sun', time: '10:00 AM – 11:00 PM' },
 ]
 
 export const FOOTER_COPY = {

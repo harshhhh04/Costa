@@ -1,21 +1,18 @@
 import { SIRDOUGH_IMAGES } from '../data/contact.js'
 
 const BAKERY_HOURS = {
-  opensAt:  7 * 60,       // 7:00 AM
-  closesAt: 14 * 60,      // 2:00 PM
+  opensAt:  10 * 60,      // 10:00 AM
+  closesAt: 23 * 60,      // 11:00 PM
 }
 
 function getOpenStatus() {
   const now     = new Date()
   const minutes = now.getHours() * 60 + now.getMinutes()
-  const day     = now.getDay() // 0 = Sunday, 1 = Monday …
-
-  if (day === 1) return 'Closed today · Opens Tuesday 7:00 AM'
 
   const isOpen = minutes >= BAKERY_HOURS.opensAt && minutes < BAKERY_HOURS.closesAt
   return isOpen
-    ? 'Open now · Closes 2:00 PM'
-    : 'Closed · Opens tomorrow 7:00 AM'
+    ? 'Open now · Closes 11:00 PM'
+    : 'Closed · Opens tomorrow 10:00 AM'
 }
 
 function Hero() {

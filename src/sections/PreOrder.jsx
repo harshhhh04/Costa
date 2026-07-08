@@ -289,7 +289,7 @@ function PreOrder() {
                   {[
                     { n: '01', t: 'Reserve by 9 PM', d: 'Fill out the form. We receive your message on WhatsApp before closing.' },
                     { n: '02', t: 'We confirm',       d: 'You\'ll get a reply confirming your loaf is set aside for tomorrow.' },
-                    { n: '03', t: 'Pick up at 7 AM',  d: 'Your bread is fresh from the oven and waiting when we open.' },
+                    { n: '03', t: 'Pick up at 10 AM', d: 'Your bread is fresh from the oven and waiting when we open.' },
                   ].map(({ n, t, d }) => (
                     <li key={n} className="flex gap-5">
                       <span className="font-serif text-xl font-normal text-dough-crust/25 shrink-0 pt-0.5">
@@ -311,16 +311,16 @@ function PreOrder() {
               {/* Contact + Hours note */}
               <div className="space-y-3">
                 <p className="text-editorial">
-                  Open Tuesday – Sunday &nbsp;·&nbsp; 7:00 AM – 2:00 PM<br />
-                  Sector 35C, Chandigarh
+                  Open Monday – Sunday &nbsp;·&nbsp; 10:00 AM – 11:00 PM<br />
+                  Sector 7-C, Chandigarh
                 </p>
                 <p className="text-[12px] font-light text-dough-charcoal/50">
                   Call or WhatsApp:{' '}
                   <a
-                    href="tel:+919872044474"
+                    href="tel:+916283371140"
                     className="text-dough-crust/70 hover:text-dough-crust transition-colors duration-300"
                   >
-                    +91 98720 44474
+                    +91 62833 71140
                   </a>
                 </p>
                 <p className="text-[12px] font-light text-dough-charcoal/50">

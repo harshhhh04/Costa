@@ -14,7 +14,7 @@ import menuBlueberryMuffinImage from '../../assets/images/menu-blueberry-muffin.
 
 export const MENU_SECTION = {
   label: 'The Daily Selection',
-  heading: 'Made this morning.\nGone by noon.',
+  heading: 'Made this morning.\nGone by afternoon.',
   subheading:
     'Everything is baked in small batches before sunrise. When it\'s gone, it\'s gone.',
 }
