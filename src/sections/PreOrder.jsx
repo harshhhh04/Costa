@@ -308,11 +308,33 @@ function PreOrder() {
                 </ol>
               </div>
 
-              {/* Hours note */}
-              <p className="text-editorial">
-                Open Tuesday – Sunday &nbsp;·&nbsp; 7:00 AM – 2:00 PM<br />
-                Sector 35C, Chandigarh
-              </p>
+              {/* Contact + Hours note */}
+              <div className="space-y-3">
+                <p className="text-editorial">
+                  Open Tuesday – Sunday &nbsp;·&nbsp; 7:00 AM – 2:00 PM<br />
+                  Sector 35C, Chandigarh
+                </p>
+                <p className="text-[12px] font-light text-dough-charcoal/50">
+                  Call or WhatsApp:{' '}
+                  <a
+                    href="tel:+919872044474"
+                    className="text-dough-crust/70 hover:text-dough-crust transition-colors duration-300"
+                  >
+                    +91 98720 44474
+                  </a>
+                </p>
+                <p className="text-[12px] font-light text-dough-charcoal/50">
+                  Follow us:{' '}
+                  <a
+                    href="https://www.instagram.com/sirdoughofficial/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-dough-crust/70 hover:text-dough-crust transition-colors duration-300"
+                  >
+                    @sirdoughofficial
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>

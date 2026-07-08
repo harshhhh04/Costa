@@ -6,7 +6,6 @@ const NAV_LINKS = [
   { label: 'Menu',        href: '#menu'      },
   { label: 'Gallery',     href: '#gallery'   },
   { label: 'Community',   href: '#community' },
-  { label: 'Reserve',     href: '#preorder'  },
 ]
 
 /* Wheat grain mark — the Sir Dough brand icon */

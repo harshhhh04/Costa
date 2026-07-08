@@ -59,6 +59,15 @@ function Footer() {
               <p className="text-[9px] font-light uppercase tracking-[0.28em] text-dough-chalk/30 mb-2">Address</p>
               <p className="text-[12px] font-light text-dough-chalk/50">{CONTACT_DETAILS.address}</p>
             </div>
+            <div>
+              <p className="text-[9px] font-light uppercase tracking-[0.28em] text-dough-chalk/30 mb-2">Phone / WhatsApp</p>
+              <a
+                href={CONTACT_DETAILS.phoneHref}
+                className="text-[12px] font-light text-dough-chalk/50 transition-colors duration-300 hover:text-dough-chalk/80"
+              >
+                {CONTACT_DETAILS.phone}
+              </a>
+            </div>
           </div>
 
           {/* Navigation */}
