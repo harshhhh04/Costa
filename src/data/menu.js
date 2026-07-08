@@ -4,10 +4,10 @@ import redVelvetCakeImage from '../../assets/images/8.jpeg'
 import icedCoffeeMuffinImage from '../../assets/images/9.jpeg'
 
 export const MENU_SECTION = {
-  label: 'Menu',
-  heading: 'What Chandigarh Keeps Ordering',
+  label: 'The Roast',
+  heading: 'Crafted coffee. Slow roasts.',
   subheading:
-    'Popular picks at Costa Coffee Sector 35C, from cappuccino breaks to evening desserts.',
+    'Simple favorites, prepared with care.',
 }
 
 export const MENU_CATEGORIES = [

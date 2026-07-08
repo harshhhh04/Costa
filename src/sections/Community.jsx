@@ -7,7 +7,7 @@ function CommunityCard({ card, index }) {
   return (
     <article
       ref={ref}
-      className={`group scroll-reveal relative overflow-hidden border border-costa-cream/[0.05] bg-costa-cream/[0.01] p-9 transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/20 sm:last:col-span-2 lg:last:col-span-1 ${
+      className={`group scroll-reveal relative overflow-hidden border border-transparent bg-transparent p-9 transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/15 sm:last:col-span-2 lg:last:col-span-1 ${
         isVisible ? 'is-visible' : ''
       }`}
       style={{ transitionDelay: `${index * 0.08}s` }}

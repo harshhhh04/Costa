@@ -27,7 +27,7 @@ function About({
   return (
     <section
       id="about"
-      className="scroll-mt-24 section-padding relative bg-costa-espresso-deep"
+      className="scroll-mt-24 section-padding relative bg-costa-mahogany"
     >
       <div className="container-wide">
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-20 xl:gap-28">

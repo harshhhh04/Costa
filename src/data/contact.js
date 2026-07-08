@@ -1,8 +1,8 @@
 export const CONTACT_HEADER = {
-  label: 'Costa Coffee Sector 35C, Chandigarh',
-  heading: 'Drop in for coffee, stay for the atmosphere.',
+  label: 'Visit Us',
+  heading: 'Your usual table is waiting.',
   subheading:
-    'Whether you are heading in for a quick cappuccino or a long work session, this is your neighborhood Costa.',
+    'Drop in for coffee, stay for the atmosphere.',
 }
 
 export const CONTACT_DETAILS = {

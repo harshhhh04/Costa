@@ -3,11 +3,10 @@ import heroBackground from '../../assets/images/5.jpeg'
 const DEFAULTS = {
   backgroundImage: heroBackground,
   label: 'Costa Coffee Sector 35C, Chandigarh',
-  brandTagline:
-    'Quiet mornings, work tables, book breaks, and conversations that run long.',
-  heading: 'Your Usual Table Is Waiting.',
+  brandTagline: '',
+  heading: 'Your usual table is waiting.',
   subheading:
-    'A neighborhood Costa for students, remote workers, and friends meeting over cappuccino in a warm, relaxed setting.',
+    'Slow mornings. Warm cups. Book breaks, and conversations that run long.',
   primaryCta: { label: 'Find Us', href: '#contact' },
   secondaryCta: { label: 'View Menu', href: '#menu' },
   rating: 4.0,
@@ -95,16 +94,19 @@ function Hero({
 
         {/* 3 & 4 — CTAs */}
         <div
-          className="hero-fade-in mt-10 flex flex-col items-center justify-center gap-4 sm:mt-12 sm:flex-row sm:gap-6"
+          className="hero-fade-in mt-10 flex flex-col items-center justify-center gap-6 sm:mt-12 sm:flex-row sm:gap-8"
           style={{ animationDelay: '0.4s' }}
         >
           <a href={primaryCta.href} className="btn-primary w-full sm:w-auto">
             {primaryCta.label}
           </a>
 
-          <a href={secondaryCta.href} className="group btn-secondary w-full sm:w-auto">
+          <a
+            href={secondaryCta.href}
+            className="group inline-flex items-center text-[11px] font-normal uppercase tracking-[0.22em] text-costa-cream/65 transition-colors duration-500 ease-expo hover:text-costa-cream w-full sm:w-auto justify-center"
+          >
             {secondaryCta.label}
-            <span className="btn-secondary-line" />
+            <span className="ml-2.5 transition-transform duration-500 ease-expo group-hover:translate-x-1">→</span>
           </a>
         </div>
 

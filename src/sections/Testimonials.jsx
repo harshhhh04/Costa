@@ -41,7 +41,7 @@ function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="scroll-mt-24 section-padding relative bg-costa-espresso-deep"
+      className="scroll-mt-24 section-padding relative bg-costa-mahogany"
     >
       <div className="container-wide">
         <header

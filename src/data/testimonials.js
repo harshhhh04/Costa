@@ -1,8 +1,8 @@
 export const TESTIMONIALS_SECTION = {
-  label: 'Guest Reviews',
-  heading: 'What People Say About Costa 35C',
+  label: 'Voices',
+  heading: 'Conversations at the next table.',
   subheading:
-    'Real feedback from customers who come here for cappuccino, comfort, and a calm atmosphere.',
+    'What our regulars say about their usual spot.',
 }
 
 export const TESTIMONIALS_SUMMARY = {

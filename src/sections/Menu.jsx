@@ -4,31 +4,28 @@ import { useInView } from '../hooks/useInView.js'
 
 function MenuItemCard({ item }) {
   return (
-    <article className="group overflow-hidden rounded-[2px] border border-costa-cream/[0.05] bg-costa-cream/[0.01] transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/25 hover:bg-costa-cream/[0.02]">
-      <div className="relative">
+    <article className="group flex gap-4 border-b border-costa-cream/[0.04] pb-6 transition-all duration-500 ease-expo hover:-translate-y-0.5">
+      <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-[1px] border border-costa-cream/[0.05]">
         <img
           src={item.image}
           alt={item.imageAlt}
           loading="lazy"
-          className="h-44 w-full object-cover transition-transform duration-700 ease-expo group-hover:scale-[1.04]"
-        />
-        <div
-          className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(243,239,230,0.06)_0%,rgba(0,0,0,0)_60%)]"
-          aria-hidden="true"
+          className="h-full w-full object-cover transition-transform duration-700 ease-expo group-hover:scale-[1.06]"
         />
       </div>
 
-      <div className="space-y-3 p-4.5 sm:p-5">
-        <div className="flex items-start justify-between gap-4">
-          <h3 className="font-serif text-xl font-light text-costa-cream">
+      <div className="flex-grow space-y-1.5">
+        <div className="flex items-baseline justify-between gap-4">
+          <h3 className="font-serif text-lg font-light text-costa-cream">
             {item.name}
           </h3>
-          <p className="font-serif text-lg font-light text-costa-cream/90">
+          <span className="h-px flex-grow border-b border-dashed border-costa-cream/10 mx-2 hidden sm:block" />
+          <p className="font-serif text-base font-light text-costa-caramel">
             {item.price}
           </p>
         </div>
 
-        <p className="text-body text-costa-cream/60">{item.description}</p>
+        <p className="text-xs font-light leading-relaxed text-costa-cream/55">{item.description}</p>
       </div>
     </article>
   )

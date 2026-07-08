@@ -6,10 +6,10 @@ import featureWallImage from '../../assets/images/4.jpeg'
 import interiorPerspectiveImage from '../../assets/images/11.jpeg'
 
 export const GALLERY_SECTION = {
-  label: 'Gallery',
-  heading: 'Inside Costa Sector 35C',
+  label: 'The Space',
+  heading: 'Cozy, not rustic. Warm, not loud.',
   subheading:
-    'Warm interiors, work-friendly tables, and everyday moments from the café.',
+    'Familiar tables, quiet corners, and daily coffee moments.',
 }
 
 export const GALLERY_IMAGES = [

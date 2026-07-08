@@ -32,7 +32,7 @@ function Gallery() {
   return (
     <section
       id="gallery"
-      className="scroll-mt-24 section-padding relative bg-costa-espresso-deep"
+      className="scroll-mt-24 section-padding relative bg-costa-walnut"
     >
       <div className="container-wide">
         <header

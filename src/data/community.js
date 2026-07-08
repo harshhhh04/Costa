@@ -4,10 +4,10 @@ import interiorCornerImage from '../../assets/images/10.jpeg'
 import interiorTablesImage from '../../assets/images/11.jpeg'
 
 export const COMMUNITY_SECTION = {
-  label: 'Community',
-  heading: 'The Heart of Sector 35C',
+  label: 'Gatherings',
+  heading: 'A local living room.',
   subheading:
-    'More than a coffee stop, this Costa is where readers, students, freelancers, and friends naturally gather.',
+    'Books, study sessions, and slow hours that make this outlet feel like a neighborhood home.',
 }
 
 export const COMMUNITY_CARDS = [
@@ -15,7 +15,7 @@ export const COMMUNITY_CARDS = [
     id: 'book-club',
     title: 'Weekly Book Club',
     description:
-      'A relaxed reading circle where regulars discuss one short read over cappuccino and mocha.',
+      'Settle in with a short read, a hot cup of mocha, and quiet company.',
     icon: 'book',
     image: interiorCornerImage,
   },
@@ -23,15 +23,15 @@ export const COMMUNITY_CARDS = [
     id: 'study-evenings',
     title: 'Study Evenings',
     description:
-      'Students settle in after classes for focused prep in comfortable seating and a calm vibe.',
+      'Focused hours in cozy seating and soft lighting after classes end.',
     icon: 'study',
     image: interiorWideImage,
   },
   {
     id: 'coffee-meetups',
-    title: 'Coffee Meetups',
+    title: 'Neighborhood Meetups',
     description:
-      'Small social tables where people from the neighborhood connect over coffee and conversation.',
+      'Familiar tables where friends connect over long conversations and cappuccinos.',
     icon: 'meet',
     image: interiorSeatingImage,
   },
@@ -39,17 +39,16 @@ export const COMMUNITY_CARDS = [
     id: 'freelancer-fridays',
     title: 'Freelancer Fridays',
     description:
-      'Remote workers and creators use the café as a soft coworking spot before heading into the weekend.',
+      'A warm, quiet space for creators and remote workers before the weekend starts.',
     icon: 'study',
     image: interiorTablesImage,
   },
   {
     id: 'weekend-conversations',
-    title: 'Weekend Conversations',
+    title: 'Sunday Mornings',
     description:
-      'Slow mornings with books, laptops, and long catch-ups that make this outlet feel like a local living room.',
+      'Slow starts with coffee, books, and long talks that linger into the afternoon.',
     icon: 'weekend',
     image: interiorWideImage,
   },
 ]
-
