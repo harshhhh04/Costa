@@ -117,23 +117,35 @@ function CommunityCard({ card, index }) {
   return (
     <article
       ref={ref}
-      className={`scroll-reveal border border-white/[0.06] bg-white/[0.01] p-9 transition-all duration-500 hover:-translate-y-1 hover:border-costa-caramel/20 hover:bg-costa-espresso-deep/[0.06] ${
+      className={`scroll-reveal relative overflow-hidden border border-white/[0.06] bg-white/[0.01] p-9 transition-all duration-500 hover:-translate-y-1 hover:border-costa-caramel/20 hover:bg-costa-espresso-deep/[0.06] ${
         isVisible ? 'is-visible' : ''
       }`}
       style={{ transitionDelay: `${index * 0.08}s` }}
     >
-      <div className="mb-8 flex items-center justify-between">
+      <img
+        src={card.image}
+        alt=""
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/75 to-black/82"
+        aria-hidden="true"
+      />
+
+      <div className="relative mb-8 flex items-center justify-between">
         <CommunityIcon name={card.icon} />
         <span className="text-label">{String(index + 1).padStart(2, '0')}</span>
       </div>
 
       <span
-        className="mb-6 block h-px w-8 bg-costa-caramel/35 transition-all duration-500 group-hover:w-14"
+        className="relative mb-6 block h-px w-8 bg-costa-caramel/35 transition-all duration-500 group-hover:w-14"
         aria-hidden="true"
       />
 
-      <h3 className="heading-dish text-2xl sm:text-3xl">{card.title}</h3>
-      <p className="text-body mt-5 max-w-[18rem]">{card.description}</p>
+      <h3 className="relative heading-dish text-2xl sm:text-3xl">{card.title}</h3>
+      <p className="relative text-body mt-5 max-w-[18rem]">{card.description}</p>
     </article>
   )
 }
@@ -160,7 +172,7 @@ function Community() {
           </p>
         </header>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {COMMUNITY_CARDS.map((card, index) => (
             <CommunityCard key={card.id} card={card} index={index} />
           ))}

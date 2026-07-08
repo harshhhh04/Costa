@@ -1,15 +1,32 @@
-import heroBackground from '../../assets/images/coffee-hero.jpeg'
+import heroBackground from '../../assets/images/5.jpeg'
 
 const DEFAULTS = {
   backgroundImage: heroBackground,
-  label: 'Costa Coffee Café & Workspace',
-  brandTagline: 'Warm light. Fresh roasts. Community in every cup.',
-  heading: 'Your Daily Cup. Your Community.',
-  subheading: 'Espresso, comfort, and cozy corners for work, study, and meet-ups.',
-  primaryCta: { label: 'Visit Us', href: '#contact' },
-  secondaryCta: { label: 'Explore Menu', href: '#menu' },
-  rating: 4.9,
-  reviewCount: 1280,
+  label: 'Costa Coffee Sector 35C, Chandigarh',
+  brandTagline:
+    'Quiet mornings, work tables, book breaks, and conversations that run long.',
+  heading: 'Your Usual Table Is Waiting.',
+  subheading:
+    'A neighborhood Costa for students, remote workers, and friends meeting over cappuccino in a warm, relaxed setting.',
+  primaryCta: { label: 'Find Us', href: '#contact' },
+  secondaryCta: { label: 'View Menu', href: '#menu' },
+  rating: 4.0,
+  reviewCount: 171,
+}
+
+const BUSINESS_HOURS = {
+  opensAt: 7 * 60 + 30,
+  closesAt: 23 * 60,
+}
+
+function getOpenStatusLabel() {
+  const now = new Date()
+  const currentMinutes = now.getHours() * 60 + now.getMinutes()
+  const isOpen =
+    currentMinutes >= BUSINESS_HOURS.opensAt &&
+    currentMinutes < BUSINESS_HOURS.closesAt
+
+  return isOpen ? 'Open Now - Closes at 11:00 PM' : 'Closed Now - Opens at 7:30 AM'
 }
 
 function Hero({
@@ -23,6 +40,8 @@ function Hero({
   rating = DEFAULTS.rating,
   reviewCount = DEFAULTS.reviewCount,
 }) {
+  const openStatusLabel = getOpenStatusLabel()
+
   return (
     <section
       id="home"
@@ -31,7 +50,10 @@ function Hero({
       {/* Background image — sharp, atmospheric */}
       <div
         className="absolute inset-0 scale-105 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundPosition: 'center 34%',
+        }}
         aria-hidden="true"
       />
 
@@ -86,6 +108,28 @@ function Hero({
           </a>
         </div>
 
+        <div
+          className="hero-fade-in mt-8 flex flex-wrap items-center justify-center gap-2.5 sm:mt-10"
+          style={{ animationDelay: '0.48s' }}
+        >
+          {[
+            openStatusLabel,
+            'Dine In',
+            'Takeaway',
+            'Delivery',
+            'Free Wi-Fi',
+            'Wheelchair Accessible',
+            'Parking Nearby',
+          ].map((tag) => (
+            <span
+              key={tag}
+              className="inline-flex items-center rounded-[2px] border border-white/[0.10] bg-black/20 px-3 py-1.5 text-[9px] uppercase tracking-[0.2em] text-white/60"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
         {/* 5 — Supporting tagline */}
         <p
           className="hero-fade-in text-editorial mt-12 sm:mt-14"
@@ -111,7 +155,7 @@ function Hero({
             <span className="text-amber-400/70" aria-hidden="true">
               ★
             </span>
-            <span className="text-white/70">{rating} Rating</span>
+            <span className="text-white/70">{rating} Google Rating</span>
             <span className="text-white/20" aria-hidden="true">
               ·
             </span>

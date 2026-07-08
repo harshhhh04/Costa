@@ -1,27 +1,47 @@
-import gallery1 from '../../assets/images/gallery-1.jpeg'
-import gallery2 from '../../assets/images/gallery-2.jpeg'
-import gallery3 from '../../assets/images/gallery-3.jpeg'
-import gallery4 from '../../assets/images/gallery-4.jpeg'
-import gallery5 from '../../assets/images/gallery-5.jpeg'
-import gallery6 from '../../assets/images/gallery-6.jpeg'
-import gallery7 from '../../assets/images/gallery-7.jpeg'
-import gallery8 from '../../assets/images/gallery-8.jpeg'
+import storefrontImage from '../../assets/images/5.jpeg'
+import wideInteriorImage from '../../assets/images/6.jpeg'
+import cozyInteriorImage from '../../assets/images/7.jpeg'
+import tableCupImage from '../../assets/images/1.jpeg'
+import featureWallImage from '../../assets/images/4.jpeg'
+import interiorPerspectiveImage from '../../assets/images/11.jpeg'
 
 export const GALLERY_SECTION = {
   label: 'Gallery',
-  heading: 'A Cozy Corner, Every Day',
+  heading: 'Inside Costa Sector 35C',
   subheading:
-    'Coffee moments in warm light—spaces to work, study, and connect.',
+    'Warm interiors, work-friendly tables, and everyday moments from the café.',
 }
 
 export const GALLERY_IMAGES = [
-  { id: 'gallery-1', src: gallery1, alt: 'Warm coffee cups on a wooden table' },
-  { id: 'gallery-2', src: gallery2, alt: 'Cafe seating with soft natural lighting' },
-  { id: 'gallery-3', src: gallery3, alt: 'A barista preparing a fresh espresso' },
-  { id: 'gallery-4', src: gallery4, alt: 'Latte art in a creamy cup' },
-  { id: 'gallery-5', src: gallery5, alt: 'A quiet workspace with coffee and books' },
-  { id: 'gallery-6', src: gallery6, alt: 'Pastries on a display with warm ambiance' },
-  { id: 'gallery-7', src: gallery7, alt: 'Cold coffee served with ice and garnish' },
-  { id: 'gallery-8', src: gallery8, alt: 'Friends meeting over coffee in cozy lighting' },
+  {
+    id: 'gallery-storefront',
+    src: storefrontImage,
+    alt: 'Costa Coffee exterior storefront in Sector 35C',
+  },
+  {
+    id: 'gallery-wide-interior',
+    src: wideInteriorImage,
+    alt: 'Wide interior seating view of the cafe',
+  },
+  {
+    id: 'gallery-cozy-seating',
+    src: cozyInteriorImage,
+    alt: 'Cozy seating zone with tables and chairs',
+  },
+  {
+    id: 'gallery-cup-on-table',
+    src: tableCupImage,
+    alt: 'Costa coffee cup on a table with ambient seating in background',
+  },
+  {
+    id: 'gallery-feature-wall',
+    src: featureWallImage,
+    alt: 'Feature wall inside the cafe',
+  },
+  {
+    id: 'gallery-interior-perspective',
+    src: interiorPerspectiveImage,
+    alt: 'Another interior perspective with open seating',
+  },
 ]
 

@@ -4,6 +4,7 @@ import {
   FOOTER_SOCIAL,
 } from '../data/contact.js'
 import { useInView } from '../hooks/useInView.js'
+import locationImage from '../../assets/images/5.jpeg'
 
 function SocialIcon({ platform }) {
   const common = 'h-4 w-4 text-white/60 transition-colors duration-400'
@@ -102,23 +103,27 @@ function Contact() {
                 </p>
               </div>
 
-              <div>
-                <p className="text-label mb-3">Phone</p>
-                <a
-                  href={CONTACT_DETAILS.phoneHref}
-                  className="font-serif text-xl font-light text-white/85 transition-colors duration-400 hover:text-costa-caramel/80 sm:text-2xl"
-                >
-                  {CONTACT_DETAILS.phone}
-                </a>
-              </div>
+              {CONTACT_DETAILS.phone && CONTACT_DETAILS.phoneHref && (
+                <div>
+                  <p className="text-label mb-3">Phone</p>
+                  <a
+                    href={CONTACT_DETAILS.phoneHref}
+                    className="font-serif text-xl font-light text-white/85 transition-colors duration-400 hover:text-costa-caramel/80 sm:text-2xl"
+                  >
+                    {CONTACT_DETAILS.phone}
+                  </a>
+                </div>
+              )}
 
               <div>
-                <p className="text-label mb-3">Email</p>
+                <p className="text-label mb-3">Official Website</p>
                 <a
-                  href={CONTACT_DETAILS.emailHref}
+                  href={CONTACT_DETAILS.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-serif text-xl font-light text-white/85 transition-colors duration-400 hover:text-costa-caramel/80 sm:text-2xl"
                 >
-                  {CONTACT_DETAILS.email}
+                  costacoffee.in
                 </a>
               </div>
 
@@ -159,21 +164,33 @@ function Contact() {
             </div>
           </div>
 
-          {/* Right — map */}
-          <div
-            ref={mapRef}
-            className={`scroll-reveal relative overflow-hidden rounded-[2px] border border-white/[0.06] bg-white/[0.01] ${
-              mapVisible ? 'is-visible' : ''
-            }`}
-          >
-            <iframe
-              title="Costa Coffee map"
-              src={mapEmbedUrl}
-              loading="lazy"
-              className="h-[22rem] w-full sm:h-[26rem]"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.28)_100%)]" />
+          {/* Right — map + location image */}
+          <div className="space-y-6">
+            <div
+              ref={mapRef}
+              className={`scroll-reveal relative overflow-hidden rounded-[2px] border border-white/[0.06] bg-white/[0.01] ${
+                mapVisible ? 'is-visible' : ''
+              }`}
+            >
+              <iframe
+                title="Costa Coffee map"
+                src={mapEmbedUrl}
+                loading="lazy"
+                className="h-[22rem] w-full sm:h-[26rem]"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.28)_100%)]" />
+            </div>
+
+            <div className="relative overflow-hidden rounded-[2px] border border-white/[0.06] bg-white/[0.01]">
+              <img
+                src={locationImage}
+                alt="Costa Coffee storefront exterior in Sector 35C"
+                loading="lazy"
+                className="h-52 w-full object-cover sm:h-60"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            </div>
           </div>
         </div>
       </div>

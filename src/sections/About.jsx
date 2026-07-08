@@ -1,18 +1,18 @@
-import aboutImage from '../../assets/images/coffee-about.jpeg'
+import aboutImage from '../../assets/images/1.jpeg'
 
 const STATS = [
-  { value: '4.9', label: 'Guest Love' },
-  { value: 'Wi-Fi', label: 'Workspace Ready' },
-  { value: 'Local', label: 'Community First' },
+  { value: '7:30 AM - 11 PM', label: 'Open Daily' },
+  { value: '4.0', label: 'Google Rating' },
+  { value: 'Sector 35C', label: 'Local Favorite' },
 ]
 
 const DEFAULTS = {
   image: aboutImage,
-  imageAlt: 'Warm Costa Coffee interior with natural light',
-  label: 'A Café Made for Your Day',
-  heading: 'Where Coffee\nFeels Like Home',
+  imageAlt: 'Costa coffee cup on a wooden table with interior ambience',
+  label: 'Why People Keep Coming Back',
+  heading: 'Built for Real\nEveryday Moments',
   paragraph:
-    'From fresh espresso to soft pastries, every detail is crafted for comfort. Stay for a meeting, settle in with a book, or catch up with friends in a warm, welcoming space.',
+    'Some guests open laptops and settle in for remote work. Some come early with books for quiet mornings. Students meet for study sessions, friends catch up over cappuccino, and teams drop in for informal meetings. It feels easy, familiar, and genuinely welcoming.',
   stats: STATS,
 }
 

@@ -1,31 +1,31 @@
 export const TESTIMONIALS_SECTION = {
-  label: 'Testimonials',
-  heading: 'Guests Who Make Costa Feel Like Home',
+  label: 'Guest Reviews',
+  heading: 'What People Say About Costa 35C',
   subheading:
-    'Warm words from regulars—about espresso, comfort, and the community vibe.',
+    'Real feedback from customers who come here for cappuccino, comfort, and a calm atmosphere.',
 }
 
 export const TESTIMONIALS_SUMMARY = {
-  rating: 4.9,
+  rating: 4.0,
   maxRating: 5,
-  totalReviews: '1,280+',
+  totalReviews: '171',
 }
 
 export const TESTIMONIALS = [
   {
     id: 't1',
     quote:
-      'The atmosphere is perfect for work and study. I come for espresso, but I stay for the calm community.',
+      'Best cappuccino I found in Chandigarh so far, and the ambience stays warm even during busy hours.',
   },
   {
     id: 't2',
     quote:
-      'Cozy lighting, friendly staff, and consistently great coffee. It feels personal every time.',
+      'Comfortable seating, friendly staff, and cafe mocha done right. Easy place to work for a couple of hours.',
   },
   {
     id: 't3',
     quote:
-      'Book Club nights here are the best. Good drinks, warm conversations, and always a welcoming crowd.',
+      'Spacious setup with a relaxing coffee aroma. Good spot to unwind, talk, or just sit with a book.',
   },
 ]
 

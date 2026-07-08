@@ -1,11 +1,13 @@
-import coffeeItem1 from '../../assets/images/coffee-item-1.jpeg'
-import coffeeItem2 from '../../assets/images/coffee-item-2.jpeg'
+import latteGlassImage from '../../assets/images/2.jpeg'
+import coffeeCroissantImage from '../../assets/images/3.jpeg'
+import redVelvetCakeImage from '../../assets/images/8.jpeg'
+import icedCoffeeMuffinImage from '../../assets/images/9.jpeg'
 
 export const MENU_SECTION = {
   label: 'Menu',
-  heading: 'Hot, Cold, and Cozy',
+  heading: 'What Chandigarh Keeps Ordering',
   subheading:
-    'A curated Costa Coffee selection for workdays, weekends, and everything in between.',
+    'Popular picks at Costa Coffee Sector 35C, from cappuccino breaks to evening desserts.',
 }
 
 export const MENU_CATEGORIES = [
@@ -14,58 +16,55 @@ export const MENU_CATEGORIES = [
     label: 'Hot Coffee',
     items: [
       {
-        id: 'caffe-latte',
-        name: 'Caffe Latte',
-        description: 'Velvety espresso with silky steamed milk and a gentle crema.',
-        price: 'Rs 299',
-        image: coffeeItem1,
-        imageAlt: 'A warm cup of caffe latte',
-      },
-      {
         id: 'cappuccino',
         name: 'Cappuccino',
-        description: 'Classic foam-topped espresso—balanced, aromatic, and comforting.',
-        price: 'Rs 279',
-        image: coffeeItem2,
-        imageAlt: 'Foam-topped cappuccino in a ceramic cup',
+        description:
+          'The branch favorite: rich espresso with thick, velvety foam and a balanced roast.',
+        price: 'Rs 245',
+        image: latteGlassImage,
+        imageAlt: 'Costa cappuccino served in a white cup',
       },
       {
         id: 'americano',
         name: 'Americano',
-        description: 'Smooth espresso stretched with hot water for a clean, rich sip.',
-        price: 'Rs 249',
-        image: coffeeItem1,
-        imageAlt: 'Americano coffee in a warm mug',
+        description:
+          'Smooth and straightforward for long work sessions and quiet morning reading.',
+        price: 'Rs 220',
+        image: coffeeCroissantImage,
+        imageAlt: 'A hot americano placed on a wooden table',
+      },
+      {
+        id: 'cafe-mocha',
+        name: 'Cafe Mocha',
+        description:
+          'A crowd-pleasing blend of espresso and chocolate, finished with creamy warmth.',
+        price: 'Rs 275',
+        image: coffeeCroissantImage,
+        imageAlt: 'Cafe mocha with chocolate notes',
       },
     ],
   },
   {
- id: 'cold-coffee',
+    id: 'cold-coffee',
     label: 'Cold Coffee',
     items: [
       {
         id: 'iced-latte',
         name: 'Iced Latte',
-        description: 'Chilled espresso, fresh milk, and a smooth, refreshing finish.',
-        price: 'Rs 329',
-        image: coffeeItem2,
-        imageAlt: 'Iced latte with a creamy swirl',
+        description:
+          'Clean espresso over ice and milk, ideal for Chandigarh afternoons.',
+        price: 'Rs 255',
+        image: icedCoffeeMuffinImage,
+        imageAlt: 'Iced latte served chilled',
       },
       {
         id: 'cold-brew',
         name: 'Cold Brew',
-        description: 'Slow-steeped coffee concentrate for a bold, low-acid taste.',
-        price: 'Rs 349',
-        image: coffeeItem1,
+        description:
+          'Slow-steeped and low-acid, with a deep roast profile and smooth finish.',
+        price: 'Rs 265',
+        image: icedCoffeeMuffinImage,
         imageAlt: 'Cold brew coffee served over ice',
-      },
-      {
-        id: 'vanilla-iced',
-        name: 'Vanilla Iced Coffee',
-        description: 'Vanilla notes with rich coffee—sweetened just right.',
-        price: 'Rs 379',
-        image: coffeeItem2,
-        imageAlt: 'Vanilla iced coffee with vanilla tones',
       },
     ],
   },
@@ -74,28 +73,22 @@ export const MENU_CATEGORIES = [
     label: 'Tea',
     items: [
       {
-        id: 'english-breakfast',
-        name: 'English Breakfast',
-        description: 'Strong, malty tea with a comforting, full-bodied finish.',
-        price: 'Rs 199',
-        image: coffeeItem1,
-        imageAlt: 'A cup of black tea',
+        id: 'earl-grey',
+        name: 'Earl Grey Tea',
+        description:
+          'Light bergamot aroma and a smooth body for slow, relaxed conversations.',
+        price: 'Rs 185',
+        image: latteGlassImage,
+        imageAlt: 'Hot earl grey tea',
       },
       {
         id: 'green-tea',
         name: 'Green Tea',
-        description: 'Fresh, light, and gently aromatic—perfect for calm moments.',
-        price: 'Rs 189',
-        image: coffeeItem2,
+        description:
+          'A clean and gentle cup preferred by regulars during quieter mornings.',
+        price: 'Rs 175',
+        image: latteGlassImage,
         imageAlt: 'A cup of green tea',
-      },
-      {
-        id: 'chai',
-        name: 'Spiced Chai',
-        description: 'Warm spices with creamy notes for cozy sipping.',
-        price: 'Rs 229',
-        image: coffeeItem1,
-        imageAlt: 'Masala chai in a warm cup',
       },
     ],
   },
@@ -104,20 +97,13 @@ export const MENU_CATEGORIES = [
     label: 'Refreshers',
     items: [
       {
-        id: 'mango-sparkler',
-        name: 'Mango Sparkler',
-        description: 'Tropical mango with a crisp, sparkling finish.',
-        price: 'Rs 249',
-        image: coffeeItem2,
-        imageAlt: 'Mango refresher drink',
-      },
-      {
-        id: 'citrus-cooler',
-        name: 'Citrus Cooler',
-        description: 'Bright citrus blend for an energizing, clean sip.',
-        price: 'Rs 239',
-        image: coffeeItem1,
-        imageAlt: 'Citrus refresher with ice',
+        id: 'lemon-iced-refresher',
+        name: 'Lemon Iced Refresher',
+        description:
+          'Citrus-forward and refreshing, a popular non-coffee order in summer.',
+        price: 'Rs 210',
+        image: icedCoffeeMuffinImage,
+        imageAlt: 'Lemon based cafe refresher with ice',
       },
     ],
   },
@@ -128,26 +114,20 @@ export const MENU_CATEGORIES = [
       {
         id: 'butter-croissant',
         name: 'Butter Croissant',
-        description: 'Flaky layers with rich butter aroma—fresh and buttery.',
-        price: 'Rs 219',
-        image: coffeeItem1,
+        description:
+          'Freshly baked layers that pair perfectly with cappuccino and mocha.',
+        price: 'Rs 195',
+        image: coffeeCroissantImage,
         imageAlt: 'A flaky croissant on a plate',
       },
       {
-        id: 'banana-bread',
-        name: 'Banana Bread',
-        description: 'Moist, fragrant slices with a warm caramel note.',
-        price: 'Rs 259',
-        image: coffeeItem2,
-        imageAlt: 'Banana bread slices',
-      },
-      {
-        id: 'almond-danish',
-        name: 'Almond Danish',
-        description: 'Toasted almonds with a delicate, pastry-perfect bite.',
-        price: 'Rs 299',
-        image: coffeeItem1,
-        imageAlt: 'Almond danish pastry',
+        id: 'blueberry-muffin',
+        name: 'Blueberry Muffin',
+        description:
+          'Soft crumb with fruit notes, often picked for quick takeaway breakfasts.',
+        price: 'Rs 205',
+        image: icedCoffeeMuffinImage,
+        imageAlt: 'Blueberry muffin served in cafe style',
       },
     ],
   },
@@ -156,28 +136,22 @@ export const MENU_CATEGORIES = [
     label: 'Desserts',
     items: [
       {
-        id: 'tiramisu',
-        name: 'Tiramisu',
-        description: 'Classic layers of espresso-soaked comfort and creamy cocoa.',
-        price: 'Rs 399',
-        image: coffeeItem2,
-        imageAlt: 'Tiramisu dessert in a glass dish',
+        id: 'new-york-cheesecake',
+        name: 'New York Cheesecake',
+        description:
+          'Creamy and balanced, a favorite with evening coffee meetups.',
+        price: 'Rs 285',
+        image: redVelvetCakeImage,
+        imageAlt: 'Cheesecake slice in a cafe',
       },
       {
-        id: 'affogato',
-        name: 'Affogato',
-        description: 'Espresso poured over vanilla gelato—simple, rich, unforgettable.',
-        price: 'Rs 349',
-        image: coffeeItem1,
-        imageAlt: 'Affogato dessert with espresso shot',
-      },
-      {
-        id: 'choco-fudge',
-        name: 'Chocolate Fudge Cake',
-        description: 'Deep cocoa intensity with a soft, indulgent center.',
-        price: 'Rs 429',
-        image: coffeeItem2,
-        imageAlt: 'Chocolate fudge cake slice',
+        id: 'choco-brownie',
+        name: 'Chocolate Brownie',
+        description:
+          'Rich cocoa and a soft center, usually ordered warm with coffee.',
+        price: 'Rs 230',
+        image: redVelvetCakeImage,
+        imageAlt: 'Warm chocolate brownie dessert',
       },
     ],
   },
