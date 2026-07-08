@@ -95,7 +95,7 @@ function Hero({
 
         {/* 3 & 4 — CTAs */}
         <div
-          className="hero-fade-in mt-12 flex flex-col items-center justify-center gap-5 sm:mt-14 sm:flex-row sm:gap-10"
+          className="hero-fade-in mt-10 flex flex-col items-center justify-center gap-4 sm:mt-12 sm:flex-row sm:gap-6"
           style={{ animationDelay: '0.4s' }}
         >
           <a href={primaryCta.href} className="btn-primary w-full sm:w-auto">
@@ -108,28 +108,6 @@ function Hero({
           </a>
         </div>
 
-        <div
-          className="hero-fade-in mt-8 flex flex-wrap items-center justify-center gap-1.5 sm:mt-10 sm:gap-2.5"
-          style={{ animationDelay: '0.48s' }}
-        >
-          {[
-            openStatusLabel,
-            'Dine In',
-            'Takeaway',
-            'Delivery',
-            'Free Wi-Fi',
-            'Wheelchair Accessible',
-            'Parking Nearby',
-          ].map((tag) => (
-            <span
-              key={tag}
-              className="inline-flex items-center rounded-[2px] border border-costa-caramel/20 bg-costa-caramel/5 px-2 py-1 text-[8px] uppercase tracking-[0.15em] text-costa-caramel/90 sm:px-3 sm:py-1.5 sm:text-[9px] sm:tracking-[0.2em]"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-
         {/* 5 — Supporting tagline */}
         <p
           className="hero-fade-in text-editorial mt-12 sm:mt-14"
@@ -138,30 +116,13 @@ function Hero({
           {brandTagline}
         </p>
 
-        {/* 6 — Supporting label */}
+        {/* 6 — Supporting label + Open Status */}
         <p
-          className="hero-fade-in text-supporting mt-4 sm:mt-5"
+          className="hero-fade-in text-supporting mt-5 sm:mt-6"
           style={{ animationDelay: '0.6s' }}
         >
-          {label}
+          {label} &nbsp;·&nbsp; {openStatusLabel}
         </p>
-
-        {/* 7 — Rating */}
-        <div
-          className="hero-fade-in divider-subtle mx-auto mt-14 max-w-xs pt-8 sm:mt-16 sm:pt-10"
-          style={{ animationDelay: '0.72s' }}
-        >
-          <div className="flex items-center justify-center gap-3 text-[11px] font-light tracking-[0.12em] text-costa-cream/50">
-            <span className="text-costa-caramel" aria-hidden="true">
-              ★
-            </span>
-            <span className="text-costa-cream/80">{rating} Google Rating</span>
-            <span className="text-costa-cream/30" aria-hidden="true">
-              ·
-            </span>
-            <span>{reviewCount} Reviews</span>
-          </div>
-        </div>
       </div>
     </section>
   )

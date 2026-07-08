@@ -61,21 +61,11 @@ function About({
 
             <p className="text-body mt-10 max-w-[26rem] text-costa-cream/70 sm:mt-12">{paragraph}</p>
 
-            {/* Statistics */}
-            <div className="divider-subtle mt-16 grid grid-cols-1 gap-y-6 pt-12 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-0 sm:pt-14 lg:mt-24">
-              {stats.map((stat, index) => (
-                <div
-                  key={stat.label}
-                  className={
-                    index > 0
-                      ? 'border-t border-costa-cream/10 pt-6 sm:border-t-0 sm:border-l sm:pl-6 sm:pt-0 sm:pl-8'
-                      : ''
-                  }
-                >
-                  <p className="stat-value">{stat.value}</p>
-                  <p className="stat-label">{stat.label}</p>
-                </div>
-              ))}
+            {/* Warm narrative sign-off instead of SaaS stats */}
+            <div className="divider-subtle mt-12 pt-8 sm:mt-14">
+              <p className="text-editorial max-w-[26rem]">
+                Open daily &nbsp;·&nbsp; 7:30 AM - 11 PM &nbsp;·&nbsp; Sector 35C, Chandigarh
+              </p>
             </div>
           </div>
         </div>

@@ -3,6 +3,25 @@ import Lightbox from '../components/Lightbox.jsx'
 import { GALLERY_IMAGES, GALLERY_SECTION } from '../data/gallery.js'
 import { useInView } from '../hooks/useInView.js'
 
+const getGridClasses = (idx) => {
+  switch (idx) {
+    case 0:
+      return 'col-span-1 md:col-span-2 h-[18rem] sm:h-[22rem] md:h-[26rem]'
+    case 1:
+      return 'col-span-1 h-[18rem] sm:h-[22rem] md:h-[26rem]'
+    case 2:
+      return 'col-span-1 h-[18rem] sm:h-[22rem] md:h-[28rem]'
+    case 3:
+      return 'col-span-1 md:col-span-2 h-[18rem] sm:h-[22rem] md:h-[28rem]'
+    case 4:
+      return 'col-span-1 h-[18rem] sm:h-[22rem] md:h-80'
+    case 5:
+      return 'col-span-1 h-[18rem] sm:h-[22rem] md:h-80'
+    default:
+      return 'col-span-1 h-64'
+  }
+}
+
 function Gallery() {
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [startIndex, setStartIndex] = useState(0)
@@ -33,7 +52,7 @@ function Gallery() {
           ref={gridRef}
           className={`scroll-reveal ${gridVisible ? 'is-visible' : ''}`}
         >
-          <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:gap-6">
+          <div className="grid gap-5 grid-cols-1 md:grid-cols-3 lg:gap-6">
             {GALLERY_IMAGES.map((img, idx) => (
               <button
                 key={img.id}
@@ -42,14 +61,14 @@ function Gallery() {
                   setStartIndex(idx)
                   setLightboxOpen(true)
                 }}
-                className="group relative overflow-hidden rounded-[2px] border border-costa-cream/[0.05] bg-costa-cream/[0.01] text-left transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/25"
+                className={`group relative overflow-hidden rounded-[2px] border border-costa-cream/[0.05] bg-costa-cream/[0.01] text-left transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/25 ${getGridClasses(idx)}`}
                 aria-label={`Open image: ${img.alt}`}
               >
                 <img
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
-                  className="h-60 w-full object-cover transition-transform duration-700 ease-expo group-hover:scale-[1.04]"
+                  className="h-full w-full object-cover transition-transform duration-700 ease-expo group-hover:scale-[1.04]"
                 />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(243,239,230,0.06)_0%,rgba(0,0,0,0)_55%)]" />
                 <div className="absolute inset-x-0 bottom-0 px-4 py-3">

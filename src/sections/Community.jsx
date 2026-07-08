@@ -1,116 +1,6 @@
 import { useInView } from '../hooks/useInView.js'
 import { COMMUNITY_CARDS, COMMUNITY_SECTION } from '../data/community.js'
 
-function CommunityIcon({ name }) {
-  const colorClass = 'text-costa-caramel/75 transition-colors duration-500 group-hover:text-costa-caramel/95'
-
-  if (name === 'book') {
-    return (
-      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" className={`h-7 w-7 ${colorClass}`}>
-        <path
-          d="M7 5.8h12.2c1.7 0 3.1 1.4 3.1 3.1V26H10.1C8.3 26 7 24.6 7 22.9V5.8Z"
-          stroke="currentColor"
-          strokeWidth="1.4"
-        />
-        <path
-          d="M10.2 9.3h9.2"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          strokeLinecap="round"
-          opacity="0.7"
-        />
-        <path
-          d="M10.2 13h9.2"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          strokeLinecap="round"
-          opacity="0.55"
-        />
-      </svg>
-    )
-  }
-
-  if (name === 'study') {
-    return (
-      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" className={`h-7 w-7 ${colorClass}`}>
-        <path
-          d="M7.2 12.2V26h17.6V12.2"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M9 10c0-2 1.6-3.6 3.6-3.6h6.8c2 0 3.6 1.6 3.6 3.6v2.2H9V10Z"
-          stroke="currentColor"
-          strokeWidth="1.4"
-        />
-        <path
-          d="M12 18h8"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          strokeLinecap="round"
-          opacity="0.7"
-        />
-      </svg>
-    )
-  }
-
-  if (name === 'meet') {
-    return (
-      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" className={`h-7 w-7 ${colorClass}`}>
-        <path
-          d="M9 12.2c0-3 2.4-5.4 5.4-5.4S19.8 9.2 19.8 12.2c0 3-2.4 5.4-5.4 5.4S9 15.2 9 12.2Z"
-          stroke="currentColor"
-          strokeWidth="1.4"
-        />
-        <path
-          d="M6.8 26c.9-4.2 4-6.8 7.6-6.8s6.7 2.6 7.6 6.8"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          strokeLinecap="round"
-          opacity="0.75"
-        />
-        <path
-          d="M22.4 13.6h3.8"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          strokeLinecap="round"
-        />
-      </svg>
-    )
-  }
-
-  // weekend
-  return (
-    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true" className={`h-7 w-7 ${colorClass}`}>
-      <path
-        d="M10 7.6h12v2.5H10V7.6Z"
-        stroke="currentColor"
-        strokeWidth="1.4"
-      />
-      <path
-        d="M8.2 11.2h15.6v9.8c0 2-1.6 3.6-3.6 3.6h-8.4c-2 0-3.6-1.6-3.6-3.6v-9.8Z"
-        stroke="currentColor"
-        strokeWidth="1.4"
-      />
-      <path
-        d="M12 18h8"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        opacity="0.7"
-      />
-      <path
-        d="M16 14.2v1.8"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        opacity="0.6"
-      />
-    </svg>
-  )
-}
-
 function CommunityCard({ card, index }) {
   const { ref, isVisible } = useInView(0.1)
 
@@ -134,9 +24,10 @@ function CommunityCard({ card, index }) {
         aria-hidden="true"
       />
 
-      <div className="relative mb-8 flex items-center justify-between">
-        <CommunityIcon name={card.icon} />
-        <span className="text-label">{String(index + 1).padStart(2, '0')}</span>
+      <div className="relative mb-6 flex items-baseline justify-between">
+        <span className="font-serif text-3xl font-light italic text-costa-caramel/70">
+          {String(index + 1).padStart(2, '0')}
+        </span>
       </div>
 
       <span

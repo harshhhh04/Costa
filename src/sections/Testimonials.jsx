@@ -37,7 +37,6 @@ function TestimonialCard({ quote, index }) {
 
 function Testimonials() {
   const { ref: headerRef, isVisible: headerVisible } = useInView()
-  const { ref: summaryRef, isVisible: summaryVisible } = useInView()
 
   return (
     <section
@@ -58,40 +57,7 @@ function Testimonials() {
           </p>
         </header>
 
-        <div
-          ref={summaryRef}
-          className={`scroll-reveal divider-subtle mx-auto mb-14 max-w-lg py-10 sm:mb-16 sm:py-12 lg:mb-20 ${
-            summaryVisible ? 'is-visible' : ''
-          }`}
-        >
-          <div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-12">
-            <div className="text-center">
-              <p className="stat-value">{TESTIMONIALS_SUMMARY.rating}</p>
-              <p className="stat-label mt-2">
-                out of {TESTIMONIALS_SUMMARY.maxRating}
-              </p>
-            </div>
-
-            <span
-              className="hidden h-12 w-px bg-white/[0.06] sm:block"
-              aria-hidden="true"
-            />
-
-            <div className="text-center">
-              <p className="stat-value">{TESTIMONIALS_SUMMARY.totalReviews}</p>
-              <p className="stat-label mt-2">Reviews</p>
-            </div>
-          </div>
-
-          <p
-            className="mt-6 text-center text-[10px] tracking-[0.3em] text-costa-caramel/45"
-            aria-hidden="true"
-          >
-            ★ ★ ★ ★ ★
-          </p>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-3 md:gap-6 lg:gap-8">
+        <div className="grid gap-5 md:grid-cols-3 md:gap-6 lg:gap-8 mt-16 sm:mt-20">
           {TESTIMONIALS.map((t, index) => (
             <TestimonialCard key={t.id} quote={t.quote} index={index} />
           ))}
