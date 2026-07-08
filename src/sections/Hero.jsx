@@ -109,7 +109,7 @@ function Hero({
         </div>
 
         <div
-          className="hero-fade-in mt-8 flex flex-wrap items-center justify-center gap-2.5 sm:mt-10"
+          className="hero-fade-in mt-8 flex flex-wrap items-center justify-center gap-1.5 sm:mt-10 sm:gap-2.5"
           style={{ animationDelay: '0.48s' }}
         >
           {[
@@ -123,7 +123,7 @@ function Hero({
           ].map((tag) => (
             <span
               key={tag}
-              className="inline-flex items-center rounded-[2px] border border-white/[0.10] bg-black/20 px-3 py-1.5 text-[9px] uppercase tracking-[0.2em] text-white/60"
+              className="inline-flex items-center rounded-[2px] border border-white/[0.10] bg-black/20 px-2 py-1 text-[8px] uppercase tracking-[0.15em] text-white/60 sm:px-3 sm:py-1.5 sm:text-[9px] sm:tracking-[0.2em]"
             >
               {tag}
             </span>

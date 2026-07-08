@@ -4,13 +4,13 @@ import { useInView } from '../hooks/useInView.js'
 
 function MenuItemCard({ item }) {
   return (
-    <article className="group overflow-hidden rounded-[2px] border border-white/[0.06] bg-white/[0.01] transition-all duration-500 hover:-translate-y-1 hover:border-white/[0.10] hover:bg-white/[0.03]">
+    <article className="group overflow-hidden rounded-[2px] border border-white/[0.06] bg-white/[0.01] transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/25 hover:bg-white/[0.02]">
       <div className="relative">
         <img
           src={item.image}
           alt={item.imageAlt}
           loading="lazy"
-          className="h-44 w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
+          className="h-44 w-full object-cover transition-transform duration-700 ease-expo group-hover:scale-[1.04]"
         />
         <div
           className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.14)_0%,rgba(0,0,0,0)_60%)]"
@@ -18,7 +18,7 @@ function MenuItemCard({ item }) {
         />
       </div>
 
-      <div className="space-y-3 p-5">
+      <div className="space-y-3 p-4.5 sm:p-5">
         <div className="flex items-start justify-between gap-4">
           <h3 className="font-serif text-xl font-light text-white">
             {item.name}
@@ -69,7 +69,7 @@ function Menu() {
           ref={contentRef}
           className={`scroll-reveal ${contentVisible ? 'is-visible' : ''}`}
         >
-          <div className="mb-10 overflow-x-auto pb-2">
+          <div className="mb-10 overflow-x-auto pb-2 no-scrollbar">
             <div
               role="tablist"
               aria-label="Menu categories"
@@ -84,7 +84,7 @@ function Menu() {
                     type="button"
                     role="tab"
                     aria-selected={selected}
-                    className={`inline-flex whitespace-nowrap rounded-[2px] border px-4 py-2 text-[11px] font-light uppercase tracking-[0.22em] transition-colors duration-300 ${
+                    className={`inline-flex whitespace-nowrap rounded-[2px] border px-4 py-2 text-[11px] font-light uppercase tracking-[0.22em] transition-all duration-500 ease-expo ${
                       selected
                         ? 'border-costa-caramel/60 bg-white/[0.06] text-white'
                         : 'border-white/[0.10] bg-white/[0.01] text-white/60 hover:text-white'

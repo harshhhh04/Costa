@@ -8,6 +8,7 @@
   --color-costa-espresso-deep: #0f0705;
   --color-costa-caramel: #c8945b;
   --color-costa-cream: #f3efe6;
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @layer base {
@@ -45,7 +46,7 @@
   }
 
   .heading-hero {
-    @apply mx-auto max-w-[16rem] font-serif text-[1.875rem] font-light leading-[1.2] tracking-[0.01em] text-white sm:max-w-xs sm:text-4xl md:max-w-sm md:text-[2.65rem] lg:text-[3.1rem];
+    @apply mx-auto max-w-[18rem] font-serif text-[1.875rem] font-light leading-[1.2] tracking-[0.01em] text-white sm:max-w-xs sm:text-4xl md:max-w-sm md:text-[2.65rem] lg:text-[3.1rem];
   }
 
   .heading-section {
@@ -61,7 +62,7 @@
   }
 
   .text-editorial {
-    @apply font-serif text-sm italic tracking-wide text-costa-caramel/35 sm:text-[15px];
+    @apply font-serif text-sm italic tracking-wide text-costa-caramel/85 sm:text-[15px];
   }
 
   .text-supporting {
@@ -70,28 +71,28 @@
 
   /* ── Buttons ── */
   .btn-primary {
-    @apply inline-flex min-w-[180px] items-center justify-center border border-costa-espresso/50 bg-costa-espresso-deep px-10 py-3.5 text-[11px] font-normal uppercase tracking-[0.22em] text-costa-cream transition-all duration-500 hover:border-costa-caramel/70 hover:bg-costa-espresso;
+    @apply inline-flex min-w-[180px] items-center justify-center border border-costa-espresso/50 bg-costa-espresso-deep px-10 py-3.5 text-[11px] font-normal uppercase tracking-[0.22em] text-costa-cream transition-all duration-500 ease-expo hover:border-costa-caramel/70 hover:bg-costa-espresso hover:-translate-y-0.5;
   }
 
   .btn-primary-sm {
-    @apply inline-flex items-center justify-center border border-costa-espresso/50 bg-costa-espresso-deep/90 px-5 py-2 text-[9px] font-normal uppercase tracking-[0.22em] text-costa-cream transition-all duration-500 hover:border-costa-caramel/70 hover:bg-costa-espresso;
+    @apply inline-flex items-center justify-center border border-costa-espresso/50 bg-costa-espresso-deep/90 px-5 py-2 text-[9px] font-normal uppercase tracking-[0.22em] text-costa-cream transition-all duration-500 ease-expo hover:border-costa-caramel/70 hover:bg-costa-espresso hover:-translate-y-0.5;
   }
 
   .btn-secondary {
-    @apply relative inline-flex min-w-[180px] items-center justify-center px-8 py-3.5 text-[11px] font-light uppercase tracking-[0.22em] text-white/55 transition-colors duration-500 hover:text-white/90;
+    @apply relative inline-flex min-w-[180px] items-center justify-center px-8 py-3.5 text-[11px] font-light uppercase tracking-[0.22em] text-white/55 transition-colors duration-500 ease-expo hover:text-white/90;
   }
 
   .btn-secondary-line {
-    @apply absolute bottom-2.5 left-1/2 h-px w-10 -translate-x-1/2 bg-white/25 transition-all duration-500 group-hover:w-[calc(100%-2rem)] group-hover:bg-costa-caramel/60;
+    @apply absolute bottom-2.5 left-1/2 h-px w-10 -translate-x-1/2 bg-white/25 transition-all duration-500 ease-expo group-hover:w-[calc(100%-2rem)] group-hover:bg-costa-caramel/60;
   }
 
   /* ── Navigation ── */
   .nav-link {
-    @apply relative text-[9px] font-light uppercase tracking-[0.22em] text-white/50 transition-colors duration-400 hover:text-white/85;
+    @apply relative text-[9px] font-light uppercase tracking-[0.22em] text-white/50 transition-colors duration-400 ease-expo hover:text-white/85;
   }
 
   .nav-link-line {
-    @apply absolute -bottom-1.5 left-0 h-px w-0 bg-costa-caramel/60 transition-all duration-400 group-hover:w-full;
+    @apply absolute -bottom-1.5 left-0 h-px w-0 bg-costa-caramel/60 transition-all duration-400 ease-expo group-hover:w-full;
   }
 
   /* ── Dividers ── */
@@ -122,16 +123,16 @@
   }
 
   .experience-panel {
-    @apply border border-white/[0.05] bg-white/[0.01] p-9 transition-all duration-500 hover:-translate-y-1 hover:border-costa-caramel/20 hover:bg-costa-espresso-deep/[0.06] sm:p-10 lg:p-12;
+    @apply border border-white/[0.05] bg-white/[0.01] p-9 transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/20 hover:bg-costa-espresso-deep/[0.06] sm:p-10 lg:p-12;
   }
 
   .review-panel {
-    @apply flex h-full flex-col border border-white/[0.05] bg-white/[0.01] p-8 transition-all duration-500 hover:-translate-y-1 hover:border-costa-caramel/20 hover:bg-costa-espresso-deep/[0.05] sm:p-9 lg:p-10;
+    @apply flex h-full flex-col border border-white/[0.05] bg-white/[0.01] p-8 transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/20 hover:bg-costa-espresso-deep/[0.05] sm:p-9 lg:p-10;
   }
 
   /* ── Forms ── */
   .reservation-form-panel {
-    @apply border border-white/[0.05] bg-white/[0.02] p-8 transition-all duration-500 hover:border-white/[0.08] hover:shadow-[0_8px_40px_rgba(0,0,0,0.4)] sm:p-10 lg:p-12;
+    @apply border border-white/[0.05] bg-white/[0.02] p-8 transition-all duration-500 ease-expo hover:border-white/[0.08] hover:shadow-[0_8px_40px_rgba(0,0,0,0.4)] sm:p-10 lg:p-12;
   }
 
   .form-field {
@@ -143,7 +144,7 @@
   }
 
   .form-input {
-    @apply w-full border-b border-white/10 bg-transparent py-3.5 text-sm font-light text-white/85 placeholder:text-white/20 transition-all duration-400 focus:border-costa-caramel/60 focus:outline-none;
+    @apply w-full border-b border-white/10 bg-transparent py-3.5 text-sm font-light text-white/85 placeholder:text-white/20 transition-all duration-400 ease-expo focus:border-costa-caramel/60 focus:outline-none;
   }
 
   .form-select {
@@ -155,7 +156,7 @@
   }
 
   .location-card {
-    @apply relative min-h-[18rem] overflow-hidden border border-white/[0.05] transition-all duration-500 hover:border-costa-caramel/20 sm:min-h-[22rem];
+    @apply relative min-h-[18rem] overflow-hidden border border-white/[0.05] transition-all duration-500 ease-expo hover:border-costa-caramel/20 sm:min-h-[22rem];
   }
 
   .cta-block {
@@ -174,15 +175,23 @@
 @layer utilities {
   .scroll-reveal {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(16px);
     transition:
-      opacity 1s ease-out,
-      transform 1s ease-out;
+      opacity 0.85s ease-expo,
+      transform 0.85s ease-expo;
   }
 
   .scroll-reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   @keyframes hero-fade-in {
@@ -197,7 +206,7 @@
   }
 
   .hero-fade-in {
-    animation: hero-fade-in 1s ease-out both;
+    animation: hero-fade-in 1s ease-expo both;
   }
 
   @keyframes menu-fade-in {
@@ -212,6 +221,6 @@
   }
 
   .menu-fade-in {
-    animation: menu-fade-in 0.35s ease-out both;
+    animation: menu-fade-in 0.35s ease-expo both;
   }
 }

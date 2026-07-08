@@ -117,7 +117,7 @@ function CommunityCard({ card, index }) {
   return (
     <article
       ref={ref}
-      className={`scroll-reveal relative overflow-hidden border border-white/[0.06] bg-white/[0.01] p-9 transition-all duration-500 hover:-translate-y-1 hover:border-costa-caramel/20 hover:bg-costa-espresso-deep/[0.06] ${
+      className={`group scroll-reveal relative overflow-hidden border border-white/[0.06] bg-white/[0.01] p-9 transition-all duration-500 ease-expo hover:-translate-y-1 hover:border-costa-caramel/20 sm:last:col-span-2 lg:last:col-span-1 ${
         isVisible ? 'is-visible' : ''
       }`}
       style={{ transitionDelay: `${index * 0.08}s` }}
@@ -126,11 +126,11 @@ function CommunityCard({ card, index }) {
         src={card.image}
         alt=""
         loading="lazy"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-expo group-hover:scale-[1.03]"
         aria-hidden="true"
       />
       <div
-        className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/75 to-black/82"
+        className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/75 to-black/82 transition-opacity duration-500 ease-expo group-hover:opacity-90"
         aria-hidden="true"
       />
 
@@ -140,7 +140,7 @@ function CommunityCard({ card, index }) {
       </div>
 
       <span
-        className="relative mb-6 block h-px w-8 bg-costa-caramel/35 transition-all duration-500 group-hover:w-14"
+        className="relative mb-6 block h-px w-8 bg-costa-caramel/35 transition-all duration-500 ease-expo group-hover:w-14 group-hover:bg-costa-caramel/60"
         aria-hidden="true"
       />
 

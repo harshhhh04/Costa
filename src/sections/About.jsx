@@ -62,11 +62,15 @@ function About({
             <p className="text-body mt-10 max-w-[22rem] sm:mt-12">{paragraph}</p>
 
             {/* Statistics */}
-            <div className="divider-subtle mt-16 grid grid-cols-3 gap-6 pt-12 sm:mt-20 sm:gap-8 sm:pt-14 lg:mt-24">
+            <div className="divider-subtle mt-16 grid grid-cols-1 gap-y-6 pt-12 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-0 sm:pt-14 lg:mt-24">
               {stats.map((stat, index) => (
                 <div
                   key={stat.label}
-                  className={index > 0 ? 'divider-vertical pl-6 sm:pl-8' : ''}
+                  className={
+                    index > 0
+                      ? 'border-t border-white/[0.06] pt-6 sm:border-t-0 sm:border-l sm:pl-6 sm:pt-0 sm:pl-8'
+                      : ''
+                  }
                 >
                   <p className="stat-value">{stat.value}</p>
                   <p className="stat-label">{stat.label}</p>

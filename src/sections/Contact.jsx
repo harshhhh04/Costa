@@ -98,7 +98,7 @@ function Contact() {
             <div className="space-y-10 sm:space-y-12">
               <div>
                 <p className="text-label mb-3">Address</p>
-                <p className="font-serif text-xl font-light text-white/85 sm:text-2xl">
+                <p className="font-serif text-lg font-light text-white/85 sm:text-xl lg:text-2xl">
                   {CONTACT_DETAILS.address}
                 </p>
               </div>
@@ -108,7 +108,7 @@ function Contact() {
                   <p className="text-label mb-3">Phone</p>
                   <a
                     href={CONTACT_DETAILS.phoneHref}
-                    className="font-serif text-xl font-light text-white/85 transition-colors duration-400 hover:text-costa-caramel/80 sm:text-2xl"
+                    className="font-serif text-lg font-light text-white/85 transition-colors duration-400 ease-expo hover:text-costa-caramel/80 sm:text-xl lg:text-2xl"
                   >
                     {CONTACT_DETAILS.phone}
                   </a>
@@ -121,7 +121,7 @@ function Contact() {
                   href={CONTACT_DETAILS.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-serif text-xl font-light text-white/85 transition-colors duration-400 hover:text-costa-caramel/80 sm:text-2xl"
+                  className="font-serif text-lg font-light text-white/85 transition-colors duration-400 ease-expo hover:text-costa-caramel/80 sm:text-xl lg:text-2xl"
                 >
                   costacoffee.in
                 </a>

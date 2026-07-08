@@ -43,7 +43,7 @@ function Navbar() {
           onClick={closeMenu}
         >
           <span
-            className="inline-block h-4 w-2.5 rounded-[1px] border border-costa-copper/60 bg-costa-espresso-deep/40 transition-colors duration-300 group-hover:border-costa-caramel/80"
+            className="inline-block h-4 w-2.5 rounded-[1px] border border-costa-caramel/50 bg-costa-espresso-deep/40 transition-colors duration-300 group-hover:border-costa-caramel/80"
             aria-hidden="true"
           />
           <span className="font-serif text-lg tracking-[0.18em] text-white/95 sm:text-xl">
@@ -97,7 +97,7 @@ function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`overflow-hidden transition-all duration-500 ease-in-out lg:hidden ${
+        className={`overflow-hidden transition-[max-height,opacity] duration-500 ease-expo lg:hidden ${
           isMenuOpen ? 'max-h-[100dvh] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
