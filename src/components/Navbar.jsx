@@ -11,8 +11,8 @@ const NAV_LINKS = [
 
 /* Wheat grain mark — the Sir Dough brand icon */
 function WheatMark({ light }) {
-  const stroke = light ? 'rgba(250,247,242,0.6)' : 'rgba(44,26,14,0.45)'
-  const strokeThin = light ? 'rgba(250,247,242,0.35)' : 'rgba(44,26,14,0.25)'
+  const stroke = light ? 'rgba(194, 155, 118, 0.95)' : 'rgba(44,26,14,0.45)'
+  const strokeThin = light ? 'rgba(194, 155, 118, 0.75)' : 'rgba(44,26,14,0.25)'
   return (
     <svg
       width="16"
@@ -66,7 +66,7 @@ function Navbar() {
           <WheatMark light={overHero} />
           <span
             className={`font-serif text-lg tracking-[0.2em] transition-colors duration-400 sm:text-xl ${
-              overHero ? 'text-dough-chalk/95' : 'text-dough-espresso'
+              overHero ? 'text-[#C29B76]' : 'text-dough-espresso'
             }`}
           >
             SIR DOUGH
@@ -82,7 +82,7 @@ function Navbar() {
                   href={link.href}
                   className={`group nav-link ${
                     overHero
-                      ? 'text-dough-chalk/60 hover:text-dough-chalk/95'
+                      ? 'text-[#C29B76]/70 hover:text-[#C29B76]'
                       : 'text-dough-charcoal/55 hover:text-dough-espresso'
                   }`}
                 >
@@ -115,21 +115,21 @@ function Navbar() {
             className={`block h-px w-5 transition-all duration-300 ${
               isMenuOpen
                 ? 'translate-y-[3px] rotate-45 bg-dough-espresso/90'
-                : overHero ? 'bg-dough-chalk/90' : 'bg-dough-espresso/90'
+                : overHero ? 'bg-[#C29B76]' : 'bg-dough-espresso/90'
             }`}
           />
           <span
             className={`block h-px w-5 transition-all duration-300 ${
               isMenuOpen
                 ? 'opacity-0 bg-dough-espresso/90'
-                : overHero ? 'bg-dough-chalk/90' : 'bg-dough-espresso/90'
+                : overHero ? 'bg-[#C29B76]' : 'bg-dough-espresso/90'
             }`}
           />
           <span
             className={`block h-px w-5 transition-all duration-300 ${
               isMenuOpen
                 ? '-translate-y-[3px] -rotate-45 bg-dough-espresso/90'
-                : overHero ? 'bg-dough-chalk/90' : 'bg-dough-espresso/90'
+                : overHero ? 'bg-[#C29B76]' : 'bg-dough-espresso/90'
             }`}
           />
         </button>
