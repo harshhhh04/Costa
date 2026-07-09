@@ -6,6 +6,8 @@ import {
   CONTACT_DETAILS,
 } from '../data/contact.js'
 
+import Marquee from './Marquee.jsx'
+
 function SocialIcon({ platform }) {
   const cls = 'h-4 w-4 text-dough-chalk/45 transition-colors duration-400 group-hover:text-dough-chalk/85'
 
@@ -39,7 +41,8 @@ function WheatMark() {
 
 function Footer() {
   return (
-    <footer className="border-t border-dough-chalk/[0.05] bg-dough-espresso">
+    <footer className="bg-dough-espresso">
+      <Marquee />
       <div className="container-wide py-14 sm:py-16 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[1fr_auto_1fr] lg:items-start lg:gap-8">
 

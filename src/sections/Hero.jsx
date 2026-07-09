@@ -1,4 +1,7 @@
 import { SIRDOUGH_IMAGES } from '../data/contact.js'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
+import Magnetic from '../components/Magnetic.jsx'
 
 const BAKERY_HOURS = {
   opensAt:  10 * 60,      // 10:00 AM
@@ -17,18 +20,29 @@ function getOpenStatus() {
 
 function Hero() {
   const openStatus = getOpenStatus()
+  const container = useRef(null)
+  
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start start', 'end start']
+  })
+  
+  // Parallax shift for the background image
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
 
   return (
     <section
       id="home"
+      ref={container}
       className="relative flex min-h-screen items-center justify-center overflow-hidden bg-dough-espresso"
     >
-      {/* Background — real Sir Dough image */}
-      <div
-        className="absolute inset-0 scale-105 bg-cover bg-center bg-no-repeat transition-transform duration-[8s] ease-out"
+      {/* Background — real Sir Dough image with Parallax */}
+      <motion.div
+        className="absolute inset-0 scale-105 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${SIRDOUGH_IMAGES.heroImg})`,
           backgroundPosition: 'center 38%',
+          y
         }}
         aria-hidden="true"
       />
@@ -86,9 +100,11 @@ function Hero() {
           className="hero-fade-in mt-10 flex justify-center sm:mt-12"
           style={{ animationDelay: '0.42s' }}
         >
-          <a href="#preorder" className="btn-primary-hero">
-            Reserve Tomorrow's Loaf
-          </a>
+          <Magnetic>
+            <a href="#preorder" className="btn-primary-hero">
+              Reserve Tomorrow's Loaf
+            </a>
+          </Magnetic>
         </div>
 
         {/* Open status */}

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Magnetic from './Magnetic.jsx'
 
 const NAV_LINKS = [
   { label: 'Home',        href: '#home'      },
@@ -92,12 +93,14 @@ function Navbar() {
             ))}
           </ul>
 
-          <a
-            href="#preorder"
-            className={overHero ? 'btn-primary-sm-light' : 'btn-primary-sm'}
-          >
-            Reserve
-          </a>
+          <Magnetic>
+            <a
+              href="#preorder"
+              className={overHero ? 'btn-primary-sm-light' : 'btn-primary-sm'}
+            >
+              Reserve
+            </a>
+          </Magnetic>
         </div>
 
         {/* Mobile menu toggle */}
