@@ -67,7 +67,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 section-padding relative bg-costa-espresso-deep"
+      className="scroll-mt-24 section-padding relative bg-dough-espresso"
     >
       <div className="container-wide">
         {/* Section header */}
@@ -79,7 +79,7 @@ function Contact() {
         >
           <p className="text-label mb-7">Visit Us</p>
           <h2 className="heading-section">
-            Your <span className="italic text-costa-caramel font-light">usual table</span> is waiting.
+            Your <span className="italic text-dough-terra font-light">usual table</span> is waiting.
           </h2>
           <p className="text-body mx-auto mt-8 max-w-md sm:mt-10">
             {CONTACT_HEADER.subheading}
@@ -108,7 +108,7 @@ function Contact() {
                   <p className="text-label mb-3">Phone</p>
                   <a
                     href={CONTACT_DETAILS.phoneHref}
-                    className="font-serif text-lg font-light text-white/85 transition-colors duration-400 ease-expo hover:text-costa-caramel/80 sm:text-xl lg:text-2xl"
+                    className="font-serif text-lg font-light text-white/85 transition-colors duration-400 ease-expo hover:text-dough-terra/80 sm:text-xl lg:text-2xl"
                   >
                     {CONTACT_DETAILS.phone}
                   </a>
@@ -121,9 +121,9 @@ function Contact() {
                   href={CONTACT_DETAILS.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-serif text-lg font-light text-white/85 transition-colors duration-400 ease-expo hover:text-costa-caramel/80 sm:text-xl lg:text-2xl"
+                  className="font-serif text-lg font-light text-white/85 transition-colors duration-400 ease-expo hover:text-dough-terra/80 sm:text-xl lg:text-2xl"
                 >
-                  costacoffee.in
+                  sirdough.in
                 </a>
               </div>
 
@@ -153,7 +153,7 @@ function Contact() {
                         className="group inline-flex items-center"
                         aria-label={link.label}
                       >
-                        <span className="transition-colors duration-400 group-hover:text-costa-caramel/90">
+                        <span className="transition-colors duration-400 group-hover:text-dough-terra/90">
                           <SocialIcon platform={link.platform} />
                         </span>
                       </a>
@@ -173,7 +173,7 @@ function Contact() {
               }`}
             >
               <iframe
-                title="Costa Coffee map"
+                title="Sir Dough map"
                 src={mapEmbedUrl}
                 loading="lazy"
                 className="h-[22rem] w-full sm:h-[26rem]"
@@ -185,7 +185,7 @@ function Contact() {
             <div className="relative overflow-hidden rounded-[2px] border border-white/[0.06] bg-white/[0.01]">
               <img
                 src={locationImage}
-                alt="Costa Coffee storefront exterior in Sector 35C"
+                alt="Sir Dough storefront exterior in Sector 7C"
                 loading="lazy"
                 className="h-52 w-full object-cover sm:h-60"
               />
